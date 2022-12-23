@@ -1,0 +1,422 @@
+.header-wrapper {
+    display: block;
+    position: relative;
+    z-index: 99;
+    .header {
+        background-color: $color--white;
+        left: 0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+        height: rem(131.385px);
+        border-bottom: 2px solid $color--red;
+        .holder {
+            @include d-flex;
+            flex-direction: column;
+            .log-in-wrap {
+                width: 100%;
+                border-bottom: rem(1px) solid $color--red;
+                text-align: right;
+                padding: rem(10px) 0;
+                .btn {
+                    padding: 12px 25px;
+                    position: relative;
+                    margin: 0;
+                    font-size: 0.8em;
+                    letter-spacing: 0.2em;
+                    white-space: nowrap;
+                }
+                @include respond-to("mobile") {
+                    text-align: center;
+                }
+            }
+            .header-nav {
+                width: 100%;
+                @include d-flex;
+                // padding: rem(17px) 0 rem(22px) 0;
+                .header-logo {
+                    line-height: 0;
+                    a {
+                        img {
+                            max-width: rem(225px);
+                            height: rem(40px);
+                            @include respond-to("mobile") {
+                                max-width: rem(200px);
+                            }
+                        }
+                    }
+                }
+                .header-menu {
+                    .main-menu {
+                        @include d-flex;
+
+                        @media (max-width: 870px) {
+                            position: fixed;
+                            flex-direction: column;
+                            top: 0;
+                            right: -100%;
+                            background-color: $color--blue;
+                            opacity: 0.9;
+                            width: 60%;
+                            height: 100%;
+                            justify-content: center;
+                            transition: all 0.3s ease-in-out;
+                            &.main-menu_show {
+                                right: 0px;
+                                transition: all 0.3s ease-in-out;
+                                li {
+                                    &:nth-child(1) {
+                                        animation-delay: 0.2s;
+                                    }
+                                    &:nth-child(2) {
+                                        animation-delay: 0.4s;
+                                    }
+                                    &:nth-child(3) {
+                                        animation-delay: 0.6s;
+                                    }
+                                    &:nth-child(4) {
+                                        animation-delay: 0.8s;
+                                    }
+                                    &:nth-child(5) {
+                                        animation-delay: 0.9s;
+                                    }
+                                    &:nth-child(6) {
+                                        animation-delay: 1s;
+                                    }
+                                }
+                            }
+                        }
+
+                        li {
+                            padding: rem(22px) 0;
+
+                            a {
+                                color: $color--light-gray;
+                                font-size: rem(14px);
+                                font-family: "Noto Sans", sans-serif;
+                                font-weight: normal;
+                                position: relative;
+                                @include respond-to("tab") {
+                                    color: $color--white;
+                                }
+                                @include respond-to("mobile") {
+                                    color: $color--white;
+                                }
+                                &::after {
+                                    @include animate-line;
+                                }
+                                &:hover {
+                                    color: $color--blue;
+                                    transition: all 0.3s ease-in-out;
+                                    &::after {
+                                        @include animate-line-hover;
+                                    }
+                                }
+                            }
+                        }
+                        li + li {
+                            margin-left: rem(32px);
+                            @include respond-to("mobile") {
+                                margin-left: 0;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                    .toggle-menu {
+                        background-color: rgba(0, 0, 0, 0);
+                        border: 0;
+                        cursor: pointer;
+                        display: block;
+                        height: 30px;
+                        outline: 0;
+                        margin-left: 1.875rem;
+                        padding: 0;
+                        position: relative;
+                        width: 30px;
+                        z-index: 991;
+                        transition: all 0.5s ease-in-out;
+                        display: none;
+                        @include respond-to("tab") {
+                            display: block;
+                            margin: 0 0 0 -30px;
+                        }
+                        i {
+                            background-color: $color--light-gray;
+                            display: block;
+                            height: 2px;
+                            width: 100%;
+                            -webkit-transition: all 0.3s ease;
+                            -o-transition: all 0.3s ease;
+                            transition: all 0.3s ease;
+                        }
+                        i + i {
+                            margin-top: 0.4375rem;
+                        }
+                        &.toggle-active {
+                          position: fixed;
+                          top: 70px;
+                            i {
+                                background-color: $color--white;
+                                position: relative;
+                                &:nth-child(1) {
+                                    top: 9px;
+                                    transform: rotate(45deg);
+                                }
+                                &:nth-child(2) {
+                                    opacity: 0;
+                                }
+                                &:nth-child(3) {
+                                    top: -9px;
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-sticky {
+        background-color: #1e6692;
+        left: 0;
+        position: fixed;
+        top: -100%;
+        width: 100%;
+        z-index: 9999;
+        transition: all 0.3s ease-in-out;
+    }
+    .header-show {
+        top: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .banner-wrapper {
+        @include bg-cover;
+        height: 340px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, rgba(36, 45, 63, 0.5) 100%);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .holder {
+            .title {
+                @include d-flex;
+                justify-content: center;
+                height: 340px;
+                h1 {
+                    color: $color--white;
+                    max-width: 730px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        .swiper-button-prev {
+            width: 55px;
+            height: 55px;
+            line-height: 53px;
+            margin-top: -30px;
+            text-align: center;
+            opacity: 1;
+            transition: all 0.3s ease;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            bottom: 50%;
+            left: 80px;
+            cursor: pointer;
+            @include respond-to("tab") {
+                display: none;
+            }
+            &::before {
+                background-image: url(https://westernshipping.sg/wp-content/themes/construct/assets/images/prev-arrow.png);
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &.swiper-button-disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+        .swiper-button-next {
+            text-shadow: 3px 3px 15px $color--bg;
+            width: 55px;
+            height: 55px;
+            line-height: 53px;
+            margin-top: -30px;
+            text-align: center;
+            opacity: 1;
+            transition: all 0.3s ease;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            bottom: 50%;
+            right: 80px;
+            cursor: pointer;
+            @include respond-to("tab") {
+                display: none;
+            }
+            &::before {
+                background-image: url(https://westernshipping.sg/wp-content/themes/construct/assets/images/next-arrow.png);
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+            transform: translate3d(0px, 0, 0);
+
+            .swiper-slide {
+                @include bg-cover;
+                flex-shrink: 0;
+                width: 100%;
+                height: calc(100vh - 131.385px);
+                position: relative;
+                transition-property: transform;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+                z-index: 1;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, rgba(36, 45, 63, 0.5) 100%);
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+
+                .holder {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: rem(575px);
+
+                    h1 {
+                        margin: rem(30px) 0 rem(45px) 0;
+                        color: $color--white;
+                        max-width: rem(617px);
+                        text-transform: uppercase;
+                        text-shadow: 2px 2px 4px #808285;
+                        span {
+                            display: block;
+                            font-family: "Lato";
+                            font-weight: 300;
+                        }
+                        .heading {
+                            font-weight: bold;
+                        }
+                    }
+                    p {
+                        color: $color--white;
+                        max-width: rem(400px);
+                        font-size: rem(15px);
+                        font-family: "Noto Sans", sans-serif;
+                        font-weight: normal;
+                        text-shadow: 2px 2px 4px #808285;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.scroll-down {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    a {
+        display: inline-block;
+        padding-bottom: 40px;
+        text-decoration: none;
+        span {
+            color: #fff;
+            display: block;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            white-space: nowrap;
+            animation: pulse 2s linear alternate infinite;
+            transition: all 0.3s ease-in-out;
+        }
+        .arrow {
+            height: 2px;
+            left: 50%;
+            margin-left: -11px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 22px;
+            transform: scale3d(0.5, 0.5, 0.5);
+            animation: infinity 3s ease-out infinite;
+            &:nth-child(1) {
+                animation: infinity 3s ease-out 1s infinite;
+            }
+            &:nth-child(2) {
+                animation: infinity 3s ease-out 2s infinite;
+            }
+            &:after {
+                background: #fff;
+                content: " ";
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                transform: skew(0deg, -35deg);
+            }
+            &::before {
+                background: #fff;
+                content: " ";
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: skew(0deg, 35deg);
+                width: 50%;
+            }
+        }
+        &:hover span {
+            opacity: 0.7;
+        }
+    }
+}

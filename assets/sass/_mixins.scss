@@ -1,0 +1,124 @@
+@mixin animate-line-hover {
+    left: 0;
+    width: 100%;
+}
+@mixin animate-line {
+    background-color:$color--blue;
+    bottom: -3px;
+    content: "";
+    height: 1px;
+    right: 0;
+    position: absolute;
+    width: 0;
+    transition: all 0.5s;
+}
+
+
+@mixin bg-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+@mixin d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/* Single property */
+html {
+  @include fluid-type(font-size, 320px, 1366px, 12px, 16px);
+}
+
+.holder{
+  @include fluid-type(padding-left padding-right, 320px, 1366px, 30px, 15px); 
+}
+
+
+
+$breakpoints: (
+  'mobile':  ( max-width:  576px ),
+  'tab'   :  ( max-width:  815px ),
+  'medium':  ( max-width: 1366px ),
+  'large' :  ( min-width: 1366px ),
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+$breakpoint: (
+  small : 576px,
+  medium: 767px, 
+  large : 1024px
+);
+
+$h1-font-sizes: (
+  null  : rem(55px),
+  small : rem(60px),
+  medium: rem(70px),
+  large : rem(83.3268px)
+);
+
+$h2-font-sizes: (
+  null  : rem(20px),
+  small : rem(20),
+  medium: rem(25px),
+  large : rem(32px)
+);
+
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoint) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
