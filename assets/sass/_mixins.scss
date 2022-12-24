@@ -1,33 +1,5 @@
-@mixin animate-line-hover {
-    left: 0;
-    width: 100%;
-}
-@mixin animate-line {
-    background-color:$color--blue;
-    bottom: -3px;
-    content: "";
-    height: 1px;
-    right: 0;
-    position: absolute;
-    width: 0;
-    transition: all 0.5s;
-}
 
-
-@mixin bg-cover {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-}
-
-@mixin d-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
+// responsive mixins-->>
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
   @each $property in $properties {
     #{$property}: $min-value;
@@ -120,5 +92,33 @@ $h2-font-sizes: (
       }
     }
   }
+}//End responsive mixins-->>
+
+@mixin animate-line-hover {
+  left: 0;
+  width: 100%;
+}
+@mixin animate-line {
+  background-color:$color--blue;
+  bottom: -3px;
+  content: "";
+  height: 1px;
+  right: 0;
+  position: absolute;
+  width: 0;
+  transition: all 0.5s;
 }
 
+
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+}
+
+@mixin d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

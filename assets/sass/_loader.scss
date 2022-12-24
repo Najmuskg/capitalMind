@@ -1,0 +1,60 @@
+#preloader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $color--navy;
+    transition: all 0.1s ease;
+    background-position: center;
+    z-index: 111;
+    .preloader--logo {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $color--red;
+            height: 1px;
+            width: 100%;
+            bottom: -12px;
+            left: 50%;
+            animation: leftRight 0.8s infinite;
+            transform: translate(-50%);
+        }
+    }
+}
+
+.loading body {
+    overflow: hidden;
+}
+
+.loaded #preloader {
+    animation-name: slideOut;
+    animation-fill-mode: forwards;
+    animation-duration: 0.8s;
+    animation-delay: 1s;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+@keyframes leftRight {
+    from {
+        width: 0;
+    }
+   
+
+    to{
+        width: 100%;
+    }
+}

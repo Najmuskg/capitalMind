@@ -10,6 +10,7 @@ $(".menu-item-has-children > a").on("click", function (event) {
   $(".toggle-menu").on("click", function () {
     $(".main-menu").toggleClass("main-menu_show");
     $(".toggle-menu").toggleClass("toggle-active");
+    $(".header").toggleClass("header-menu");
   });
   $(".toggle-active").on("click", function () {
     $(".toggle-menu").removeClass("toggle-active");
