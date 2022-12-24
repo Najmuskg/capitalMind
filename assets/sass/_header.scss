@@ -24,9 +24,15 @@
                         position: fixed;
                         background-color: $color--menu-bg;
                         width: 100%;
-                        top: 87.1px;
+                        top: -100%;
                         left: 0;
                         height: rem(515px);
+                        transition: 0.5s ease-in-out;
+                        z-index: -1;
+                        &.main-menu_show{
+                            top: 87.1px;
+                            transition: 0.5s ease-in-out;
+                        }
                         .holder {
                             display: flex;
                             gap: 0 50px;

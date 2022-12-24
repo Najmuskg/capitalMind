@@ -1304,9 +1304,20 @@ h3 {
   position: fixed;
   background-color: #1D2331;
   width: 100%;
-  top: 87.1px;
+  top: -100%;
   left: 0;
   height: 32.1875rem;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.header-wrapper .header .holder nav .menu .main-menu.main-menu_show {
+  top: 87.1px;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .header-wrapper .header .holder nav .menu .main-menu .holder {

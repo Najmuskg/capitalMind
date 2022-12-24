@@ -11,6 +11,7 @@ $(".menu-item-has-children > a").on("click", function (event) {
     $(".main-menu").toggleClass("main-menu_show");
     $(".toggle-menu").toggleClass("toggle-active");
     $(".header").toggleClass("header-menu");
+    $(".main-menu").toggleClass("menu-menu_show");
   });
   $(".toggle-active").on("click", function () {
     $(".toggle-menu").removeClass("toggle-active");
