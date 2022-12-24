@@ -3,7 +3,7 @@
     position: relative;
     z-index: 99;
     .header {
-        background-color: $color--navy;
+        background-color: transparent;
         left: 0;
         position: absolute;
         top: 0;
@@ -24,7 +24,7 @@
                         position: fixed;
                         background-color: $color--menu-bg;
                         width: 100%;
-                        top: -100%;
+                        top: -135%;
                         left: 0;
                         height: rem(515px);
                         transition: 0.5s ease-in-out;
@@ -185,5 +185,20 @@
     .header-show {
         top: 0;
         transition: all 0.3s ease-in-out;
+    }
+
+    .banner-wrapper{
+        @include bg-cover;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $color--dark-gray;
+            opacity: 40%;
+        }
     }
 }
