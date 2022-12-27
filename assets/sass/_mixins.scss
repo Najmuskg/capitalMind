@@ -36,7 +36,6 @@ html {
 }
 
 
-
 $breakpoints: (
   'mobile':  ( max-width:  576px ),
   'tab'   :  ( max-width:  815px ),
@@ -64,17 +63,16 @@ $breakpoint: (
 );
 
 $h1-font-sizes: (
-  null  : rem(55px),
-  small : rem(60px),
-  medium: rem(70px),
-  large : rem(83.3268px)
+  null  : 55px,
+  small : 55px,
+  medium: 65px,
+  large : 83.3268px
 );
-
 $h2-font-sizes: (
-  null  : rem(20px),
-  small : rem(20),
-  medium: rem(25px),
-  large : rem(32px)
+  null  : 20px,
+  small : 20px,
+  medium: 24px,
+  large : 28px
 );
 
 
@@ -92,7 +90,10 @@ $h2-font-sizes: (
       }
     }
   }
-}//End responsive mixins-->>
+}
+
+
+//End responsive mixins-->>
 
 @mixin animate-line-hover {
   left: 0;

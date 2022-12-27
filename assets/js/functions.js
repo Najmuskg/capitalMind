@@ -8,15 +8,16 @@ $(".menu-item-has-children > a").on("click", function (event) {
 /* Sticky Menu */
   /* ------------------------------------------- */
   $(".toggle-menu").on("click", function () {
-    $(".main-menu").toggleClass("main-menu_show");
-    $(".toggle-menu").toggleClass("toggle-active");
-    $(".header").toggleClass("header-menu");
-    $(".main-menu").toggleClass("menu-menu_show");
+    $(".header").toggleClass("nav-open");
+    
   });
-  $(".toggle-active").on("click", function () {
-    $(".toggle-menu").removeClass("toggle-active");
-  });
+  
 
+
+  // langs
+  $(".language").on("click", function () {
+    $(".language").toggleClass("lang-subOpen");
+  });
 
  /* Show Header when scroll up */
   /* ------------------------------------------- */
