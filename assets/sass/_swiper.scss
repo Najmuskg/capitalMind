@@ -1,0 +1,230 @@
+.carousel {
+    background-color: $color--navy;
+    padding: 60px 0;
+    .section-heading {
+        .holder {
+            padding-bottom: 30px;
+            @media (min-width: 768px) {
+                @include d-flex;
+                flex-direction: row;
+            }
+
+            .section--title {
+                h2 {
+                    font-weight: 275;
+                    font-size: 32px;
+                    line-height: 120.5%;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: -0.02em;
+                    color: $color--white;
+                    margin-bottom: 19.66px;
+                }
+            }
+        }
+    }
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+            transform: translate3d(0px, 0, 0);
+
+            .swiper-slide {
+                @include bg-cover;
+                flex-shrink: 0;
+                width: 100%;
+                position: relative;
+                transition-property: transform;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+                z-index: 1;
+                padding-bottom: 30px;
+
+                .holder {
+                    @media (min-width: 768px) {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 20px;
+                        gap: 0 45px;
+                        flex-direction: row;
+                    }
+                    .heading-info {
+                        padding-top: 20px;
+                        p {
+                            color: $color--white;
+                            font-weight: 300;
+                            font-size: rem(18px);
+                            line-height: 164%;
+                            display: flex;
+                            align-items: center;
+                            letter-spacing: -0.02em;
+                            max-width: 470px;
+                            margin-top: 20px;
+                            &:last-child {
+                                font-weight: 700;
+                                font-size: rem(13px);
+                                line-height: 163%;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-deals {
+                .holder {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    @media (min-width: 768px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+                    .deals-img_item {
+                        position: relative;
+                        border-radius: 10px;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
+                            border-radius: 10px;
+                        }
+                        img {
+                            border-radius: 10px;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .holder {
+            .swiper-controls {
+                display: flex;
+                align-items: center;
+                .swiper-controls__navigation {
+                    align-items: center;
+                    display: flex;
+                    .swiper-button-previous {
+                        color: $color--white;
+                        border-radius: 73px;
+                        cursor: pointer;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        height: auto;
+                        margin-right: 0.625rem;
+                        position: static;
+
+                        &.swiper-button-disabled {
+                            pointer-events: none;
+                            opacity: 0.5;
+                        }
+                        img {
+                            height: auto;
+                            width: 26px;
+                        }
+                    }
+                    .swiper-button-next {
+                        color: $color--white;
+                        border-radius: 73px;
+                        cursor: pointer;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        height: auto;
+                        margin: 0;
+                        position: static;
+                        margin-left: 5px;
+                        margin-right: 11.5px;
+                        img {
+                            height: auto;
+                            width: 26px;
+                        }
+                    }
+                }
+                .swiper-controls__progress {
+                    align-items: center;
+                    display: flex;
+                    flex-grow: 1;
+                    margin-left: 0.625rem;
+                    .swiper-pagination-progressbar {
+                        background: $color--white;
+                        height: 1px;
+                        position: relative;
+                        width: 100%;
+                        span {
+                            background: $color--white;
+                            height: 3px;
+                            left: 0;
+                            position: absolute;
+                            top: -1px;
+                            transform-origin: left top;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.deals-wrap {
+    background-color: $color--white;
+    padding: 60px 0;
+    .section-heading {
+        .holder {
+            .section--title {
+                h2 {
+                    color: $color--navy;
+                }
+            }
+            .section--btn {
+                a {
+                    color: $color--blue;
+                    &:hover {
+                        background-color: $color--blue;
+                        color: $color--white;
+                    }
+                }
+            }
+        }
+    }
+    .swiper {
+        .holder {
+            .swiper-controls {
+                .swiper-controls__navigation {
+                    .swiper-button-previous {
+                        color: $color--blue;
+                    }
+                    .swiper-button-next {
+                        color: $color--blue;
+                    }
+                }
+                .swiper-controls__progress {
+                    .swiper-pagination-progressbar {
+                        background: $color--navy;
+                        span {
+                            background: $color--navy;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

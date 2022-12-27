@@ -2,7 +2,7 @@ body {
   font-family: "Interstate";
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 29px;
   color: $color--dark-gray;
   background-color: $color--bg;
@@ -303,6 +303,7 @@ h2 {
   @include font-size($h2-font-sizes);
   position: relative;
   padding-bottom: 20px;
+  margin-bottom: 19.6px;
   max-width: 715px;
 }
 h3 {

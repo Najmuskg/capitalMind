@@ -153,18 +153,17 @@ scrollers.forEach((scroller) => observer.observe(scroller));
 
 
   
-  new Swiper(".carousel", {
+  new Swiper(".swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
-      el: ".carousel-progress",
+      el: ".quote-progress",
       type: "progressbar",
-      clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+    },
     // breakpoints: {
     //   768: {
     //     slidesPerView: 2,
