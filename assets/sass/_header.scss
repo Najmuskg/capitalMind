@@ -53,7 +53,7 @@
         background-color: $color--white;
         position: relative;
         transition: all 0.3s ease;
-        border-bottom:0.5px solid $color--border ;
+        border-bottom: 0.5px solid $color--border;
 
         .holder {
             .menu-header {
@@ -66,10 +66,13 @@
                     display: flex;
                     align-items: center;
                     .search-btn {
-                        padding-right: 22px;
-                        img {
-                            width: 15px;
-                            height: 15px;
+                        // padding-right: 22px;
+                        a {
+                            img {
+                                width: 15px;
+                                height: 15px;
+                            }
+                           
                         }
                     }
                     .language {
@@ -176,13 +179,29 @@
             width: 100%;
             transition: all 0.5s ease-in-out;
             z-index: 9999;
-            
+
             .holder {
                 z-index: 9999;
                 .menu-header {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    .language-slector {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        .search-btn {
+                            padding-right: 0;
+                           a{
+                          color: $color--white;
+                          i{
+                            font-size: 15px;
+                            color: $color--white;
+                            padding-right: 20px;
+                          }
+                           }
+                        }
+                    }
                 }
                 .main--nav-wrapper {
                     padding: 99px 0;
@@ -265,7 +284,7 @@
                     left: 0;
                     background-color: $color--border;
                     z-index: 1;
-                    transition:all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
                 }
                 @media (min-width: 768px) {
                     max-height: 591px;
@@ -285,11 +304,15 @@
                             display: flex;
                             align-items: center;
                             .search-btn {
-                                padding-right: 22px;
-                                img {
-                                    width: 15px;
-                                    height: 15px;
-                                }
+                                padding-right: 0;
+                               a{
+                              color: $color--white;
+                              i{
+                                font-size: 15px;
+                                color: $color--white;
+                                padding-right: 20px;
+                              }
+                               }
                             }
                             .language {
                                 span {
@@ -468,7 +491,7 @@
             width: 100%;
             z-index: 1;
             position: relative;
-            top:2px;
+            top: 2px;
             .banner-title {
                 h1 {
                     max-width: 519px;

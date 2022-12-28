@@ -226,21 +226,22 @@
     }
 }
 
-
-.news{
-    .swiper{
-        .swiper-wrapper{
-                .swiper-slide{
+.news {
+    .holder {
+        padding-top: 25px;
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
                     width: 362px;
                     flex-shrink: 1;
-                     margin-right: 10px;
-                    .holder{
+                    margin-right: 10px;
+                    .holder {
                         padding: 0;
-                        .image-block{
-                            .image--promo{
+                        .image-block {
+                            .image--promo {
                                 display: block;
-                                .image--promo__item{
-                                    a{
+                                .image--promo__item {
+                                    a {
                                         width: 362px;
                                         height: 583px;
                                     }
@@ -251,5 +252,22 @@
                 }
             }
         }
-        
     }
+}
+.location {
+    background-color: $color--bg;
+    .section-heading {
+        .holder {
+            .section--title {
+                h2 {
+                    color: $color--navy;
+                }
+            }
+            .section--btn {
+                a {
+                    color: $color--blue;
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,8 @@
     <title>Capital Mind</title>
 
     <link rel="stylesheet" href="assets/css/screen.min.css"><!--Style Css-->
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script><!--Jquery-->
 </head>
 
@@ -22,7 +23,6 @@
     </div> -->
     <!--End preloader-->
 
-
     <div class="main-wrapper">
 
         <section class="header-wrapper floating--header">
@@ -30,10 +30,24 @@
                 <div class="holder">
                     <div class="menu-header">
                         <div class="language-slector">
-                            <div class="search-btn">
-                                <a href="#">
-                                    <img src="assets/images/searchIcon.png" alt="Search Icon">
+
+
+                            <div class="overlay">
+                                <a class="mk-search-trigger mk-fullscreen-trigger" href="#" id="search-button-listener">
+                                    <div id="search-button"><i class="fa fa-search"></i></div>
                                 </a>
+                                <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
+                                    <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i
+                                            class="fa fa-times"></i></a>
+                                    <div id="mk-fullscreen-search-wrapper">
+                                        <form method="get" id="mk-fullscreen-searchform" action="">
+                                            <input type="text" value="" placeholder="Search..."
+                                                id="mk-fullscreen-search-input">
+                                            <i class="fa fa-search fullscreen-search-icon"><input value=""
+                                                    type="submit"></i>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                             <div class="language">
                                 <span>EN</span>
@@ -65,7 +79,7 @@
                             <div class="language-slector">
                                 <div class="search-btn">
                                     <a href="#">
-                                        <img src="assets/images/searchIcon.png" alt="Search Icon">
+                                        <i class="fa fa-search"></i>
                                     </a>
                                 </div>
                                 <div class="language">
@@ -332,6 +346,137 @@
             </div>
         </section>
 
+        <section class="carousel news location">
+            <div class="section-heading">
+                <div class="holder" data-scroll="">
+                    <div class="section--title slide-up">
+                        <h2>A global M&A advisory group</h2>
+                    </div>
+                    <div class="section--btn slide-up">
+                        <a href="#" class="btn">View all locations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="holder">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>Benelux</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> France</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> Germany</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> Swizerland</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>United Kingdom</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>Italy</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
 
 
         <section class="partners-wrapper">
@@ -384,11 +529,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -396,11 +541,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -408,11 +553,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -420,11 +565,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -432,11 +577,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -444,18 +589,18 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="swiper-slide swiper-deals">
                         <div class="holder">
                             <div class="image-block ">
@@ -465,11 +610,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -477,11 +622,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -489,11 +634,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -501,11 +646,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -513,11 +658,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -525,18 +670,18 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="swiper-slide swiper-deals">
                         <div class="holder">
                             <div class="image-block ">
@@ -546,11 +691,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -558,11 +703,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -570,11 +715,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -582,11 +727,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -594,11 +739,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -606,18 +751,18 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="swiper-slide swiper-deals">
                         <div class="holder">
                             <div class="image-block ">
@@ -627,11 +772,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -639,11 +784,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -651,11 +796,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -663,11 +808,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -675,11 +820,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -687,18 +832,18 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     <div class="swiper-slide swiper-deals">
                         <div class="holder">
                             <div class="image-block ">
@@ -708,11 +853,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -720,11 +865,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -732,11 +877,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -744,11 +889,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -756,11 +901,11 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="image--promo__item slide-up">
@@ -768,22 +913,22 @@
                                             <div class="image--promo__item_img"
                                                 style="background-image: url(assets/images/dealsImage.jpg);">
                                             </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
+                                            <div class="image--promo_text">
+                                                <span>Business Services</span>
+                                                <span>Industrials</span>
+                                                <p> Beno Holding secures real estate financing</p>
+                                            </div>
                                         </a>
                                     </div>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                 
-                  
+                    </div>
+
+
                 </div>
-                 
+
                 <div class="holder">
                     <div class="swiper-controls">
                         <div class="swiper-controls__navigation">
@@ -799,7 +944,7 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -815,154 +960,154 @@
                 </div>
             </div>
             <div class="holder">
-            <div class="swiper news-swiper">
-                <div class="swiper-wrapper">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
 
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
-                                    </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
-                                    </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
-                                    </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <div class="swiper-slide swiper-deals">
-                        <div class="holder">
-                            <div class="image-block ">
-                                <div class="image--promo" data-scroll="">
-                                    <div class="image--promo__item slide-up">
-                                        <a href="#">
-                                            <div class="image--promo__item_img"
-                                                style="background-image: url(assets/images/dealsImage.jpg);">
-                                            </div>
-                                           <div class="image--promo_text">
-                                            <span>Business Services</span>
-                                            <span>Industrials</span>
-                                            <p> Beno Holding secures real estate financing</p>
-                                           </div>
-                                        </a>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <span>Business Services</span>
+                                                    <span>Industrials</span>
+                                                    <p> Beno Holding secures real estate financing</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                    </div>
+
+                    <div class="holder">
+                        <div class="swiper-controls">
+                            <div class="swiper-controls__navigation">
+                                <div class="swiper-button-previous quote-prev">
+                                    <img src="assets/images/blueLeftArrow.svg" alt="">
+                                </div>
+                                <div class="swiper-button-next quote-next">
+                                    <img src="assets/images/blueRightArrow.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-controls__progress">
+                                <div class="swiper-pagination quote-progress">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                 
-                <div class="holder">
-                    <div class="swiper-controls">
-                        <div class="swiper-controls__navigation">
-                            <div class="swiper-button-previous quote-prev">
-                                <img src="assets/images/blueLeftArrow.svg" alt="">
-                            </div>
-                            <div class="swiper-button-next quote-next">
-                                <img src="assets/images/blueRightArrow.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="swiper-controls__progress">
-                            <div class="swiper-pagination quote-progress">
-                            </div>
-                        </div>
-                    </div>
-                    </div>
             </div>
-</div>
-              
+
         </section>
 
-       
+
 
 
 
