@@ -7,6 +7,7 @@
             @media (min-width: 768px) {
                 @include d-flex;
                 flex-direction: row;
+                padding-bottom: 0px;
             }
 
             .section--title {
@@ -83,13 +84,9 @@
                 }
             }
             .swiper-deals {
+                // height: 430px;
                 .holder {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 10px;
-                    @media (min-width: 768px) {
-                        grid-template-columns: 1fr 1fr 1fr;
-                    }
+                    display: block;
                     .deals-img_item {
                         position: relative;
                         border-radius: 10px;
@@ -228,3 +225,31 @@
         }
     }
 }
+
+
+.news{
+    .swiper{
+        .swiper-wrapper{
+                .swiper-slide{
+                    width: 362px;
+                    flex-shrink: 1;
+                     margin-right: 10px;
+                    .holder{
+                        padding: 0;
+                        .image-block{
+                            .image--promo{
+                                display: block;
+                                .image--promo__item{
+                                    a{
+                                        width: 362px;
+                                        height: 583px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }

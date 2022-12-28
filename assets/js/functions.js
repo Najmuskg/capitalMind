@@ -163,13 +163,23 @@ scrollers.forEach((scroller) => observer.observe(scroller));
     navigation: {
       nextEl: ".quote-next",
       prevEl: ".quote-prev",
+      
     },
-    // breakpoints: {
-    //   768: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 40,
-    //   },
-    // },
+
+  });
+  new Swiper(".news-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    pagination: {
+      el: ".quote-progress",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+      
+    },
+
   });
  
 

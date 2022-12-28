@@ -594,6 +594,133 @@ h3 {
   opacity: 0.7;
 }
 
+.image-block {
+  -webkit-clip-path: none;
+          clip-path: none;
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  left: 0;
+  top: 0;
+}
+
+.image-block .image--promo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 576px) {
+  .image-block .image--promo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 0 30px 0;
+    gap: 10px;
+  }
+}
+
+.image-block .image--promo .image--promo__item {
+  width: 100%;
+}
+
+.image-block .image--promo .image--promo__item a {
+  text-decoration: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 22.1875rem;
+  width: 100%;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+}
+
+.image-block .image--promo .image--promo__item a .image--promo_text {
+  padding: 0 0 30px 25px;
+}
+
+.image-block .image--promo .image--promo__item a .image--promo_text span {
+  z-index: 1;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+  color: #ffffff;
+  padding: 5px 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.image-block .image--promo .image--promo__item a .image--promo_text p {
+  max-width: 308px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 122%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+  margin-top: 25px;
+}
+
+.image-block .image--promo .image--promo__item a .image--promo__item_img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.image-block .image--promo .image--promo__item a:hover .image--promo__item_img {
+  -webkit-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.image-block img {
+  max-width: 49.375rem;
+  height: 100%;
+}
+
+.image-block img:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.image-block img:nth-child(2) {
+  -webkit-transition-delay: 0.6s;
+       -o-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
 @-webkit-keyframes line {
   0% {
     height: 0;
@@ -1355,6 +1482,7 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-bottom: 0px;
   }
 }
 
@@ -1468,18 +1596,7 @@ h3 {
 }
 
 .carousel .swiper .swiper-wrapper .swiper-deals .holder {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-@media (min-width: 768px) {
-  .carousel .swiper .swiper-wrapper .swiper-deals .holder {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-  }
+  display: block;
 }
 
 .carousel .swiper .swiper-wrapper .swiper-deals .holder .deals-img_item {
@@ -1645,6 +1762,26 @@ h3 {
 
 .deals-wrap .swiper .holder .swiper-controls .swiper-controls__progress .swiper-pagination-progressbar span {
   background: #002A60;
+}
+
+.news .swiper .swiper-wrapper .swiper-slide {
+  width: 362px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  margin-right: 10px;
+}
+
+.news .swiper .swiper-wrapper .swiper-slide .holder {
+  padding: 0;
+}
+
+.news .swiper .swiper-wrapper .swiper-slide .holder .image-block .image--promo {
+  display: block;
+}
+
+.news .swiper .swiper-wrapper .swiper-slide .holder .image-block .image--promo .image--promo__item a {
+  width: 362px;
+  height: 583px;
 }
 
 .header-wrapper {
