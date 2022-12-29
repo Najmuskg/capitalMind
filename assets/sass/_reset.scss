@@ -1,3 +1,8 @@
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+/* ------------------------------------------- */
+/* -- Reset */
+/* ------------------------------------------- */
+
 html,
 body,
 p,
@@ -9,7 +14,6 @@ iframe {
   margin: 0;
   padding: 0;
 }
-
 button,
 input,
 select,
@@ -18,15 +22,12 @@ textarea {
 }
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
-
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
-
 img,
 embed,
 iframe:not(.instagram-media):not(.wp-embedded-content),
@@ -35,6 +36,18 @@ audio,
 video {
   height: auto;
   max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
 }
 
 h1,
@@ -46,4 +59,3 @@ h6,
 p {
   margin-top: 0;
 }
-

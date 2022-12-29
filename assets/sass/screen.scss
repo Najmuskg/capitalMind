@@ -1,23 +1,56 @@
-@import url("https://use.typekit.net/neg3agg.css");//---font
+@import "breakpoint-sass/stylesheets/breakpoint";
 
-// reset
-@import "reset";
+// A basic reset
 @import "fonts";
+@import "reset";
 
-// mixins
+// Collection of mixins
 @import "mixins";
+/* ---------------------- */
 
-// variables
+// Variables
+// Breakpoints, colors font-sizes
 @import "variables";
-
 
 @import "base";
 
-@import "animation";
-@import "swiper";
+// Styles for Slick Slider
+// http://kenwheeler.github.io/slick/
 
-@import "header";
-@import "footer";
+// @import "slider";
+/* ---------------------- */
+
+// Easy grids
+// Uses CSS Grid with a fallback to create easy squre grids
+
+// Usage
+// @include block-grid(number of cols, gap between items)
+
+// With a breakpoint - gives a 2 col grid, with 20px default gap, then a 3 col grid at wider size
+/*
+@include block-grid(2);
+@include breakpoint(600px){
+@include block-grid(3);
+}
+
+*/
+@import "loader";
+@import "block-grid";
+// @import "scroll";
+
+/* ---------------------- */
 
 @import "home";
-@import "loader";
+@import "animation";
+@import "header";
+@import "swiper";
+@import "footer";
+@import "blocks";
+@import "magnific";
+@import "team";
+@import "news";
+@import "slider";
+@import "contact";
+@import "promo";
+@import "services";
+@import "deals";

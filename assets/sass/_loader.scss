@@ -1,31 +1,17 @@
 #preloader {
+    background-color: $color--6;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $color--navy;
+    z-index: 100000;
     transition: all 0.1s ease;
-    background-position: center;
-    z-index: 111;
-    .preloader--logo {
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: $color--red;
-            height: 1px;
-            width: 100%;
-            bottom: -12px;
-            left: 50%;
-            animation: leftRight 0.8s infinite;
-            transform: translate(-50%);
-        }
-    }
 }
 
 .loading body {
@@ -35,8 +21,8 @@
 .loaded #preloader {
     animation-name: slideOut;
     animation-fill-mode: forwards;
-    animation-duration: 0.8s;
-    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
 }
 
 @keyframes slideOut {
@@ -48,13 +34,44 @@
         transform: translateY(-100%);
     }
 }
-@keyframes leftRight {
+
+.preloader-logo {
+    &__icon {
+        position: relative;
+
+        &::after {
+            background-color: $color--white;
+            bottom: -8px;
+            content: "";
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+
+            animation-name: leftToRight;
+            animation-duration: 0.8s;
+            animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            transform: translateX(-50%);
+            animation-delay: 0.3s;
+            transition: 1s 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        svg {
+            height: auto;
+            width: 300px;
+        }
+    }
+}
+
+@keyframes leftToRight {
     from {
         width: 0;
     }
-   
 
-    to{
+    to {
         width: 100%;
     }
 }

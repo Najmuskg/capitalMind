@@ -1,0 +1,133 @@
+.swiper-controls {
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: center;
+    margin: rem(20) auto 0;
+
+    @include breakpoint($breakpoint--main + 0px) {
+        margin: rem(40) auto 0;
+    }
+
+    &__navigation {
+        align-items: center;
+        display: flex;
+
+        .swiper-button-next,
+        .swiper-button-previous {
+            background-color: $color--1;
+            border-radius: 73px;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            margin: 0;
+            position: static;
+            width: 70px;
+
+            &::after {
+                content: none;
+            }
+
+            svg {
+                height: auto;
+                width: 34px;
+            }
+
+            .arrow-link_angle {
+                background-color: $color--white;
+
+                &::before,
+                &::after {
+                    background-color: $color--white;
+                }
+            }
+            &.swiper-button-disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+
+            &:hover {
+                background-color: $color--2;
+            }
+        }
+
+        .swiper-button-previous {
+            .arrow-link_angle {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:last-child {
+            margin-left: auto;
+
+            @include breakpoint($breakpoint--main + 0px) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__progress {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        margin-left: rem(10);
+
+        .swiper-pagination-progressbar {
+            background: rgba($color--1, 0.5);
+            height: 2px;
+            position: relative;
+            width: 100%;
+
+            span {
+                background: $color--1;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                transform-origin: left top;
+                width: 100%;
+            }
+        }
+    }
+
+    &__bullets {
+        display: none;
+
+        @include breakpoint($breakpoint--main + 0px) {
+            align-items: center;
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &-bullet {
+        background-color: $color--1;
+        display: block;
+        cursor: pointer;
+        border-radius: 0;
+        height: 2px;
+        margin: 0 rem(5) 0;
+        opacity: 0.5;
+        width: 53px;
+
+        @include breakpoint($breakpoint--main + 0px) {
+            margin: 0 rem(5);
+        }
+
+        &.swiper-pagination-bullet-active {
+            background-color: $color--1;
+            cursor: default;
+            opacity: 1;
+        }
+    }
+}

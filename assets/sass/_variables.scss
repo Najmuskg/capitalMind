@@ -18,17 +18,30 @@ $browser-context: 16; // Default
   @return #{$pixels/$context}em;
 }
 
+/* ------------------------------------------- */
+/* -- Colours + Variables */
+/* ------------------------------------------- */
 
-$font-Interstate:"Interstate";
+$site-width: 1100;
 
-//--colours-->
-$color--bg: #F5F5F5;
+// Defsult space
+$space: 20px;
+
+$font--main: 'Interstate', sans-serif;
+$font--alt: "Arial", sans-serif;
+
+// Body copy colour
+$color--gray: #F5F5F5;
+
+// Colours - eidt as needed
 $color--white: #ffffff;
-$color--navy: #002A60;
-$color--red: #BF0A27;
-$color--light-gray: #EBEBED;
-$color--border:#BEBEBE;;
-$color--blue: #307FD3;
-$color--dark-gray: #232323;
-$color--menu-bg: #1D2331;
+$color--black: #000000;
+$color--1: #002A60;
+$color--2: #307FD3;
+$color--3: #BF0A27;
+$color--4: #EBEBED;
+$color--5: #BEBEBE;
+$color--6: #232323;
+$color--7: #1D2331;
 
+$breakpoint--main: 768;
