@@ -86,7 +86,7 @@
         justify-content: end;
         flex: 0 0 30%;
         max-width: 30%;
-        padding-top: 30px;
+        padding-top: 0px;
     }
     .numberList {
         @include breakpoint($breakpoint--main + 0px) {

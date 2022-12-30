@@ -4243,7 +4243,7 @@ footer .footer--info .footer--info__socials a img {
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
     max-width: 30%;
-    padding-top: 30px;
+    padding-top: 0px;
   }
 }
 
