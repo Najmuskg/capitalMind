@@ -244,13 +244,12 @@ ul,
 ol {
   color: $color--6;
   font-family: $font--main;
-  font-size: rem(1);
+  font-size: rem(15);
   line-height: 164.5%;
-  letter-spacing: 0.055em;
   margin: 0;
 
   @include breakpoint($breakpoint--main + 0px) {
-    font-size: rem(15);
+    font-size: rem(16);
   }
 
   + p,
@@ -479,6 +478,30 @@ input[type="search"]::-webkit-search-results-decoration {
 .bg-white {
   background-color: $color--white;
 }
+
+.bg-navy {
+  background-color: $color--1;
+
+  .title--block {
+    .section--title {
+      color: $color--white;
+    }
+    .title--block__btn {
+      .btns {
+        border-color: $color--white;
+        color: $color--white;
+      }
+    }
+  }
+}
+.d-flex{
+  display: flex;
+  justify-content: space-between;
+  .section--title{
+    padding-bottom: 0;
+  }
+}
+
 .bg-gray {
   background-color: #fafafa;
 

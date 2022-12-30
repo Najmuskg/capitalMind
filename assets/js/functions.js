@@ -186,36 +186,51 @@ $(function () {
   /* Sliders */
   /* ------------------------------------------- */
 
-  new Swiper(".quoteSlider", {
+  // new Swiper(".quoteSlider", {
+  //   slidesPerView: 1,
+  //   spaceBetween: 0,
+  //   pagination: {
+  //     el: ".quote-progress",
+  //     type: "progressbar",
+  //   },
+  //   breakpoints: {
+  //     768: {
+  //       slidesPerView: 2,
+  //       spaceBetween: 40,
+  //     },
+
+  //   },
+  // });
+
+  new Swiper(".swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
       el: ".quote-progress",
       type: "progressbar",
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-
+    navigation: {
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+      
     },
+
   });
 
-  new Swiper(".dealsSlider", {
-    slidesPerView: "auto",
-    freeMode: true,
-    loop: true,
-    spaceBetween: 0,
-    pagination: {
-      el: ".deals-progress",
-      type: "progressbar",
-    },
-    // navigation: {
-    //   nextEl: ".deals-button-next",
-    //   prevEl: ".deals-button-prev",
-    // },
-  });
+  // new Swiper(".dealsSlider", {
+  //   slidesPerView: "auto",
+  //   freeMode: true,
+  //   loop: true,
+  //   spaceBetween: 0,
+  //   pagination: {
+  //     el: ".deals-progress",
+  //     type: "progressbar",
+  //   },
+  //   // navigation: {
+  //   //   nextEl: ".deals-button-next",
+  //   //   prevEl: ".deals-button-prev",
+  //   // },
+  // });
 
   // new Swiper(".teamsSlider", {
   //   slidesPerView: "auto",

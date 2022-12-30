@@ -107,20 +107,14 @@
     text-transform: uppercase;
 }
 
-@mixin section-title {
-    // color: $color--2;
-    // font-weight: 400;
-    // font-size: rem(35);
-    // line-height: rem(41);
-    // margin: 0 0 rem(15);
-    // padding-bottom: rem(20);
-    // position: relative;
-
-    // @include breakpoint($breakpoint--main + 0px) {
-    //     font-size: rem(45);
-    //     line-height: 130%;
-    //     margin: 0 0 rem(20);
-    // }
+@mixin section--title {
+    font-weight: 275;
+    line-height: 120.5%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: $color--1;
+    padding-bottom:rem(20);
 
     &::after {
         background-color: $color--3;

@@ -1,0 +1,157 @@
+.content--block {
+    padding: 27px 0;
+    @include breakpoint($breakpoint--main + 0px) {
+        padding: 27px 0 85px 0;
+        position: relative;
+    }
+   
+}
+
+.counter--wrap{
+    .holder {
+        padding-top: 0;
+        @include breakpoint($breakpoint--main + 0px) {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding-top: 138px;
+        }
+    }
+}
+// &::after{
+//     content: "";
+//     position: absolute;
+//     background-image:url(../images/VectorLogo.png) ;
+//     height: 100%;
+//     width: 100%;
+//     overflow: hidden;
+//     top: 0;
+//     left: 0;
+//     @include bg-cover;
+// }
+
+.title--block {
+    width: 100%;
+    
+    .section--title{
+        @include section--title;
+        padding-bottom: 0;
+       
+    }
+    .title--block__info {
+        max-width: 44rem;
+        padding: 0 0 20px 0;
+        p {
+            font-weight: 300;
+            line-height: 164.5%;
+            color: $color--6;
+        }
+    }
+    .title--block__btn {
+        text-align: center;
+        
+        .btns {
+            color: $color--2;
+            &:hover {
+                background-color: $color--2;
+                color: $color--white;
+                border-color: $color--white;
+            }
+        }
+    }
+    &.counter--title{
+        @include breakpoint($breakpoint--main + 0px) {
+            flex: 0 0 70%;
+            max-width: 70%;
+            
+        }
+        .section--title{
+            padding-bottom: 20px;
+        }
+
+        .section--title__btn{
+            @include breakpoint($breakpoint--main + 0px) {
+                text-align: left;
+              }
+
+        }
+    }
+}
+
+.counter--block {
+    width: 100%;
+    padding-top: 30px;
+    @include breakpoint($breakpoint--main + 0px) {
+        @include d-flex;
+        justify-content: end;
+        flex: 0 0 30%;
+        max-width: 30%;
+        padding-top: 30px;
+    }
+    .numberList {
+        @include breakpoint($breakpoint--main + 0px) {
+            display: grid;
+        }
+        .numberList__item {
+            text-align: center;
+            img {
+                max-height: 65px;
+            }
+            @include respond-to("tab") {
+                padding: 0 0 30px 0;
+            }
+            &:nth-child(1) {
+                transition-delay: 0.4s;
+            }
+            &:nth-child(2) {
+                transition-delay: 0.6s;
+            }
+            &:nth-child(3) {
+                transition-delay: 0.8s;
+            }
+
+            .numberList__item_number {
+                font-weight: 275;
+                font-size: 66.2893px;
+                line-height: 80px;
+                text-align: center;
+                color: $color--2;
+                padding-bottom: 2px;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: center;
+                color: $color--1;
+                @include breakpoint($breakpoint--main + 0px) {
+                    max-width: 155px;
+                }
+            }
+        }
+    }
+}
+
+
+.carousel{
+    padding: 60px 0;
+    .holder{
+        .title--block{
+            @include d-flex;
+            justify-content: space-between;
+            flex-direction: column;
+            @include breakpoint($breakpoint--main + 0px) {
+               flex-direction: row;
+            }
+            .title--block__btn{
+                text-align: left;
+                padding-top: 30px;
+                .btns{
+                    margin: 0;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
