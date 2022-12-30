@@ -37,6 +37,15 @@
     transform: translateY(0%) scale(1);
 }
 
+@keyframes line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 63px;
+    }
+}
+
 @keyframes image-loaded {
     from {
         opacity: 0;

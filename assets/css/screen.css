@@ -134,7 +134,7 @@ p {
   }
 }
 
-.main--menu, .footer__menu ul {
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu, .main--menu, .footer__menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1232,6 +1232,24 @@ input[type="search"]::-webkit-search-results-decoration {
           transform: translateY(0%) scale(1);
 }
 
+@-webkit-keyframes line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 63px;
+  }
+}
+
+@keyframes line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 63px;
+  }
+}
+
 @-webkit-keyframes image-loaded {
   from {
     opacity: 0;
@@ -2180,6 +2198,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header .nav-wrapper .holder .main--nav-wrapper .main--nav {
   padding: 0;
+  list-style: none;
+  padding-right: 2.5rem;
 }
 
 .header .nav-wrapper .holder .main--nav-wrapper .main--nav li {
@@ -2192,7 +2212,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header .nav-wrapper .holder .main--nav-wrapper .main--nav li a {
-  width: 319px;
   height: 24px;
   font-family: "Interstate";
   font-style: normal;
@@ -2207,9 +2226,23 @@ input[type="search"]::-webkit-search-results-decoration {
           align-items: center;
   letter-spacing: 0.055em;
   text-decoration: none;
-  text-transform: uppercase;
   color: #ffffff;
   position: relative;
+  text-transform: uppercase;
+}
+
+.header .nav-wrapper .holder .main--nav-wrapper .main--nav li a:hover {
+  color: #BF0A27;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.header .nav-wrapper .holder .main--nav-wrapper .main--nav li a:hover::after {
+  right: 0.625rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header .nav-wrapper .holder .main--nav-wrapper .main--nav li a::after {
@@ -2221,8 +2254,11 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 10px;
   position: absolute;
   right: 0;
-  top: 3px;
-  width: 55px;
+  top: 0.4375rem;
+  width: 44px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .header .nav-wrapper .holder .toggle-menu i {
@@ -2314,6 +2350,128 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li {
   opacity: 0;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open > .submenu-wrap span {
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open > .submenu-wrap {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open > .submenu-wrap {
+    max-height: 450px;
+  }
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open > .submenu-wrap .sub-menu a {
+  color: #ffffff;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open > .submenu-wrap .sub-menu a:hover {
+  color: #BF0A27;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li.menu-item-has-children.open a {
+  color: #BF0A27;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu {
+  padding-right: 2.5rem;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu li {
+  padding: 0 0 0.8125rem 0;
+  opacity: 0;
+  border-bottom: none;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu li:first-child {
+  padding: .5625rem 0 9px 0;
+  border-bottom: 1px solid #bbbec1;
+  margin-bottom: 9px;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu li:first-child a {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu li:first-child a::after {
+  background-image: url(../images/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 0.4375rem;
+  width: 44px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav > li ul.sub-menu li a {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav.sub-menu-open > li:not(.open) > a {
+    opacity: 0.2;
+  }
+}
+
+.header.nav-open .nav-wrapper .main--nav-wrapper .main--nav .submenu-wrap {
+  border-left: 1px solid #dadada;
+  display: block;
+  height: 100%;
+  padding: 0.625rem 1.5625rem;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav .submenu-wrap {
+    display: none;
+    left: 100%;
+    padding: 0rem 2.5rem;
+    position: absolute;
+    top: 0;
+    width: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav .submenu-wrap {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 1.5625rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .header.nav-open .nav-wrapper .main--nav-wrapper .main--nav li {
@@ -2589,6 +2747,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (min-width: 768px) {
   .banner--wrapper__caption_btn .btns {
     display: inline-block;
+    margin-top: 0px;
   }
 }
 

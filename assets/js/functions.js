@@ -74,6 +74,7 @@ $(function () {
     $(".menu-item-has-children").removeClass("open");
   });
 
+
   // End of Sticky Menu
 
   /* Filter drop down */
