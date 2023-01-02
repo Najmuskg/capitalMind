@@ -1,7 +1,7 @@
 .main--nav-wrapper {
     position: relative;
     width: 100%;
-    padding: 99px 0;
+    padding: 30px 0;
     width: 100%;
     max-height: 591px;
 
@@ -14,17 +14,6 @@
         position: relative;
 
         li {
-            opacity: 0;
-            animation-name: fadeInn;
-            animation-duration: 0.65s;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-
-            @for $i from 1 through 15 {
-                &:nth-child(#{$i}n) {
-                    animation-delay: #{$i * 0.1}s;
-                }
-            }
             a {
                 text-transform: uppercase;
                 font-style: normal;

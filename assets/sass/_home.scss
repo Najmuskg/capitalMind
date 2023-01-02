@@ -136,14 +136,13 @@
   }
   /* Search Button */
   #search-button {
-    width: 16px;
-    padding-right: 35px;
+    padding-right: 25px;
   }
-  #search-button i{
-    color: white !important;
-    font-size: 15px;
+  #search-button img{
     position: relative;
-    top: rem(-5);
+    top: 3px;
+    width: 16px;
+    height: 16px;
   
   }
   #mk-fullscreen-search-input:focus{

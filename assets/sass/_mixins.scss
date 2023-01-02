@@ -108,7 +108,7 @@
 }
 
 @mixin section--title {
-    font-weight: 275;
+    font-weight: 300;
     line-height: 120.5%;
     display: flex;
     align-items: center;
@@ -120,7 +120,7 @@
         background-color: $color--3;
         bottom: 0;
         content: "";
-        height: 2px;
+        height: 1px;
         left: 0;
         position: absolute;
         width: 0;

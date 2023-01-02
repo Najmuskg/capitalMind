@@ -8,13 +8,15 @@
 }
 
 .counter--wrap{
+    background-image: url(../images/Brand-BG.png);
+    @include bg-cover;
+    padding: 138px 0 85px 0;
     .holder {
         padding-top: 0;
         @include breakpoint($breakpoint--main + 0px) {
             display: flex;
             justify-content: space-between;
             flex-direction: row;
-            padding-top: 138px;
         }
     }
 }
@@ -111,7 +113,7 @@
             }
 
             .numberList__item_number {
-                font-weight: 275;
+                font-weight: 300;
                 font-size: 66.2893px;
                 line-height: 80px;
                 text-align: center;
