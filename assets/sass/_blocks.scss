@@ -41,16 +41,15 @@
        
     }
     .title--block__info {
-        max-width: 44rem;
+        max-width: 43rem;
         padding: 0 0 20px 0;
         p {
             font-weight: 300;
             line-height: 164.5%;
-            color: $color--6;
+            color: $color--body-copy;
         }
     }
     .title--block__btn {
-        text-align: center;
         
         .btns {
             color: $color--2;
@@ -85,7 +84,7 @@
     padding-top: 30px;
     @include breakpoint($breakpoint--main + 0px) {
         @include d-flex;
-        justify-content: end;
+        justify-content: center;
         flex: 0 0 30%;
         max-width: 30%;
         padding-top: 0px;
@@ -117,7 +116,7 @@
                 font-size: 66.2893px;
                 line-height: 80px;
                 text-align: center;
-                color: $color--2;
+                color: $color--3;
                 padding-bottom: 2px;
             }
 
@@ -148,8 +147,7 @@
             }
             .title--block__btn{
                 text-align: left;
-                padding-top: 30px;
-                .btns{
+                .btn{
                     margin: 0;
                     display: inline-block;
                 }
@@ -157,3 +155,208 @@
         }
     }
 }
+
+.partners-wrapper {
+    background: rgba(0, 42, 96, 0.05);
+    @media (min-width: 768px) {
+        padding: 0;
+        height: 722px;
+    }
+    .partners-holder {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @media (min-width: 768px) {
+            display: flex;
+            gap: 0 26px;
+            align-items: center;
+            padding-top: 0;
+        }
+        .title--block {
+           width: 100%;
+           padding-bottom: 30px;
+            @media (min-width: 768px) {
+                flex: 0 0 540px;
+                max-width: 540px;
+            }
+            .title--block__info {
+                max-width: 511px;
+                p {
+                    margin: 30px 0;
+                }
+            }
+            .title--block__btn {
+                a {
+                    border-color:$color--3 ;
+                    color: $color--3;
+                    &:hover {
+                        background-color: $color--3;
+                        color: $color--white;
+                        border-color: $color--white;
+                    }
+                }
+                a + a{
+                    margin-left: 20px;
+                }
+            }
+        }
+        .partners-img {
+          width: 100%;
+            @media (min-width: 768px) {
+                flex: 0 0 626px;
+                max-width: 626px;
+            }
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+.news {
+    .holder {
+        padding-top: 25px;
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    width: 362px;
+                    flex-shrink: 1;
+                    margin-right: 10px;
+                    .holder {
+                        padding: 0;
+                        .image-block {
+                            .image--promo {
+                                display: block;
+                                .image--promo__item {
+                                    a {
+                                        width: 362px;
+                                        height: 583px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.image-block {
+    clip-path: none;
+    transition-delay: 0.4s;
+    left: 0;
+    top: 0;
+    .image--promo {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      @include respond-to("mobile") {
+        flex-direction: column;
+        padding: 0px 0 30px 0;
+        gap: 10px;
+      }
+      .image--promo__item {
+        width: 100%;
+       
+  
+        a {
+          text-decoration: none;
+          overflow: hidden;
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: end;
+          height: rem(355px);
+          width: 100%;
+          position: relative;
+          flex-direction: column;
+          border-radius: 10px;
+  
+          .image--promo_text {
+            padding: 0 0 30px 25px;
+            span {
+              z-index: 1;
+              position: relative;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 26px;
+              color: $color--white;
+              padding: 5px 6px;
+              background: rgba(255, 255, 255, 0.15);
+              border-radius: 3px;
+              margin-right: 10px;
+            }
+            p {
+              max-width: 308px;
+              font-weight: 300;
+              font-size: 18px;
+              line-height: 122%;
+              display: flex;
+              align-items: center;
+              letter-spacing: -0.02em;
+              color: $color--white;
+              z-index: 1;
+              position: relative;
+              margin-top: 25px;
+            }
+          }
+          .image--promo__item_img {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+            transition: all 0.5s ease-in-out;
+            
+          }
+  
+          &:hover {
+        .image--promo__item_img{
+          transform: scale(1.04);
+        }
+           
+          }
+        }
+      }
+    }
+    img {
+      max-width: rem(790px);
+      height: 100%;
+      &:nth-child(1) {
+        transition-delay: 0.2s;
+      }
+      &:nth-child(2) {
+        transition-delay: 0.6s;
+      }
+    }
+  }
+
+
+  .swiper-controls__progress {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 0.625rem;
+    .swiper-pagination-progressbar {
+        background: $color--white;
+        height: 1px;
+        position: relative;
+        width: 100%;
+        span {
+            background: $color--white;
+            height: 3px;
+            left: 0;
+            position: absolute;
+            top: -1px;
+            transform-origin: left top;
+            width: 100%;
+        }
+    }
+}
+

@@ -9,7 +9,6 @@
     <title>Capital Mind</title>
 
     <link rel="stylesheet" href="assets/css/screen.min.css"><!--Style Css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <!--Style Css-->
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script><!--Jquery-->
@@ -25,202 +24,216 @@
     <!--End preloader-->
 
     <div class="main--wrapper">
-
         <section class="header--wrapper floating--header">
             <header class="header">
-                <div class="header-nav">
-                    <div class="holder">
-                        <div class="header__left">
-                            <div class="overlay">
-                                <a class="mk-search-trigger mk-fullscreen-trigger" href="#" id="search-button-listener">
-                                    <div id="search-button"><img src="assets/images/search-icon.png" alt=""></div>
-                                </a>
-                                <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
-                                    <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i
-                                            class="fa fa-times"></i></a>
-                                    <div id="mk-fullscreen-search-wrapper">
-                                        <form method="get" id="mk-fullscreen-searchform" action="">
-                                            <input type="text" value="" placeholder="Search..."
-                                                id="mk-fullscreen-search-input">
-                                            <i class="fa fa-search fullscreen-search-icon"><input value=""
-                                                    type="submit"></i>
-                                        </form>
+                <div class="holder">
+                    <div class="header__left">
+                        <div class="searchWrap">
+                            <span class="searchButton">
+                                <img src="assets/images/searchIcon.svg" alt="">
+                            </span>
+
+                            <div class="fullScreen--search">
+                                <div class="searchClose">&times;</div>
+
+                                <form role="search" method="get" class="search-form" action="/">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control" placeholder="Search" name="s"
+                                            id="search-input">
+                                        <button type="submit"><img src="assets/images/searchIcon.svg" alt=""></button>
                                     </div>
-                                </div>
-                            </div><!--overlay-->
+                                </form>
+                            </div>
+                        </div><!-- /.searchWrap -->
 
-                            <div class="language">
-                                <span>EN</span>
-                                <div class="langs">
-                                    <a href="#">US</a>
-                                    <a href="#">UK</a>
-                                    <a href="#">FR</a>
-                                </div>
-                            </div><!--language--selector-->
+                        <div class="language-slector">
+                            <span>EN</span>
 
-                        </div><!--header--left-->
+                            <div class="langs">
+                                <a href="#">FR</a>
+                                <a href="#">DE</a>
+                                <a href="#">NL</a>
+                            </div>
+                        </div>
+                    </div><!-- /.header__left -->
 
-                        <div class="header__logo">
-                            <a href="index.html">
-                                <h1 title="Capital Mind"><img src="assets/images/Logo.svg" alt="Capital Mind"></h1>
-                            </a>
-                        </div><!--header--logo-->
-
-                        <div class="header__menu">
-                            ​<button class="toggle-menu">
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                            </button>
-                        </div><!--header--menu-->
-
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <h1 title="Capital Mind"><img src="assets/images/Logo.svg"
+                                    alt="Capital Mind"></h1>
+                        </a>
                     </div>
+
+                    <div class="header__menu">
+                        <button class="toggle-menu">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </button>
+                    </div><!-- /.header__menu -->
+
                 </div>
 
-
                 <div class="nav-wrapper">
-                    <div class="header-nav">
+                    <div class="nav-wrapper__header">
                         <div class="holder">
                             <div class="header__left">
-                                <div class="overlay">
-                                    <a class="mk-search-trigger mk-fullscreen-trigger" href="#"
-                                        id="search-button-listener">
-                                        <div id="search-button"><img src="assets/images/search-icon.png" alt=""></div>
-                                    </a>
-                                    <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
-                                        <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i
-                                                class="fa fa-times"></i></a>
-                                        <div id="mk-fullscreen-search-wrapper">
-                                            <form method="get" id="mk-fullscreen-searchform" action="">
-                                                <input type="text" value="" placeholder="Search..."
-                                                    id="mk-fullscreen-search-input">
-                                                <i class="fa fa-search fullscreen-search-icon"><input value=""
-                                                        type="submit"></i>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div><!--overlay-->
+                                <div class="searchWrap">
+                                    <span class="searchButton">
+                                        <img src="assets/images/searchIcon.svg" alt="">
+                                    </span>
+                                </div>
 
-                                <div class="language">
+                                <div class="language-slector">
                                     <span>EN</span>
-                                    <div class="langs">
-                                        <a href="#">US</a>
-                                        <a href="#">UK</a>
-                                        <a href="#">FR</a>
-                                    </div>
-                                </div><!--language--selector-->
 
-                            </div><!--header--left-->
+                                    <div class="langs">
+                                        <a href="#">FR</a>
+                                        <a href="#">DE</a>
+                                        <a href="#">NL</a>
+                                    </div>
+                                </div>
+                            </div><!-- /.header__left -->
 
                             <div class="header__logo">
                                 <a href="index.html">
-                                    <h1 title="Capital Mind"><img src="assets/images/Logo.svg" alt="Capital Mind"></h1>
+                                    <h1 title="Capital Mind"><img src="assets/images/Logo.svg"
+                                            alt="Capital Mind"></h1>
                                 </a>
-                            </div><!--header--logo-->
+                            </div>
 
                             <div class="header__menu">
-                                ​<button class="toggle-menu">
+                                <button class="toggle-menu">
                                     <i></i>
                                     <i></i>
                                     <i></i>
                                 </button>
-                            </div><!--header--menu-->
-
+                            </div><!-- /.header__menu -->
                         </div>
-                    </div>
+                    </div><!-- /.nav-wrapper__header -->
+
 
                     <div class="holder">
                         <nav class="main--nav-wrapper">
-                            <ul class="main--nav">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="team.html">Our Team</a></li>
-                                <li class="menu-item-has-children"><a href="sector.html">Sector Expertise</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">Sector Expertise</a></li>
-                                        <li><a href="#">Business Services</a></li>
-                                        <li><a href="#">Consumer</a></li>
-                                        <li><a href="#">Food & Agro</a></li>
-                                        <li><a href="#">Healthcare</a></li>
-                                        <li><a href="#">Industrials</a></li>
-                                        <li><a href="#">Industrials</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="help.html">How we can help</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">How we can help</a></li>
-                                        <li><a href="#">Sell your Business</a></li>
-                                        <li><a href="#">Buy A Business</a></li>
-                                        <li class="menu-item-has-children"><a href="#">Growth / Equity Capital </a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">How we can help</a></li>
-                                                <li><a href="#">Sell your Business</a></li>
-                                                <li><a href="#">Buy A Business</a></li>
-                                                <li><a href="#">Buy A Business</a></li>
-                                                <li><a href="#">Buy A Business</a></li>
-                                                <li><a href="#">Buy A Business</a></li>
-                                                <li><a href="#">Buy A Business</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Debt Advisory</a></li>
-                                        <li><a href="#">Buyout</a></li>
-                                        <li><a href="#">Carve Out</a></li>
-                                        <li><a href="#">Restructuring</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="client.html">Client Stories</a></li>
-                                <li><a href="news.html">News & Insights</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li class="menu-item-has-children"><a href="global.html">GLobal Locations</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">GLobal Locations</a></li>
-                                        <li><a href="#">Denmark</a></li>
-                                        <li><a href="#">Benelux</a></li>
-                                        <li><a href="#">France</a></li>
-                                        <li><a href="#">Germany</a></li>
-                                        <li><a href="#">Switzerland</a></li>
-                                        <li><a href="#">United Kingdom</a></li>
-                                        <li><a href="#">United States</a></li>
-                                        <li><a href="#">South Africa</a></li>
-                                        <li><a href="#">Australia</a></li>
-                                        <li><a href="#">India</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="subscribe.html">Subscribe to our insights</a></li>
-                            </ul>
-                        </nav><!--main--nav--wrapper -->
+                            <div class="primary-nav">
+                                <ul class="main--nav">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="our-team.html">Our Team</a></li>
+                                    <li class="menu-item-has-children"><a href="#">Sector Expertise</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">How Can We HElp</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">GLobal Locations</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="client-stories.html">Client Stories</a></li>
+                                    <li><a href="news-insights.html">News & Insights</a></li>
+                                    <li><a href="contact-us.html">Contact Us</a></li>
+                                    <li><a href="#">Subscribe to our Insights</a></li>
+                                </ul>
+                            </div><!-- /.primary-nav -->
+
+                            <div class="secondary-nav">
+                                <ul class="main--nav">
+                                    <li class="menu-item-has-children"><a href="#">Sector Expertise</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">How Can We HElp</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">GLobal Locations</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="business-services.html">Business Services</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                            <li><a href="#">Industrials</a></li>
+                                            <li><a href="#">TMT</a></li>
+                                            <li><a href="#">Consumer</a></li>
+                                            <li><a href="#">Food & Agro</a></li>
+                                            <li><a href="#">Healthcare</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /.secondary-nav -->
+
+                        </nav><!-- /.main--nav-wrapper -->
                     </div>
-                </div><!--nav--wrapper -->
-
-            </header><!--header -->
+                </div><!-- /.nav--wrapper -->
 
 
-            <div class="banner--wrapper"
-                style="background-image: url(assets/images/businesspeople-in-office-with-woman-using-digital-2022-11-06-22-50-40-utc\ 1.jpg)">
+            </header><!-- /.header -->
+
+
+            <div class="banner--wrapper">
+
+
+                 <div class="jarallax" data-speed="0.5" style="background-image: url('assets/images/businesspeople-in-office-with-woman-using-digital-2022-11-06-22-50-40-utc\ 1.jpg');"></div>
+
+
                 <div class="holder">
-                    <div class="banner--wrapper__caption" data-scroll="">
-
-                        <div class="banner--wrapper__caption_title ">
-                            <h1 class="caption--title">Beyond Transactions</h1>
+                    <div class="banner--wrapper__caption" data-scroll>
+                        <div class="banner--wrapper__caption_title">
+                            <h1>Beyond Transactions</h1>
                         </div>
 
-                        <div class="banner--wrapper__caption_btn slide-up">
-                            <a class="btns" href="#">Read Client Stories</a>
-                            <a class="btns" href="#">Find out how we can help</a>
+                        <div class="btn--block slide-up">
+                            <a href="#" class="btn btn--white">Read Client Stories</a>
+                            <a href="#" class="btn btn--white">Find out how we can help</a>
                         </div>
-
-                    </div>
-
-                    <div class="scroll-down">
-                        <a href="#feat">
-                            <span>Scroll</span>
-                            <div class="line"></div>
-                        </a>
                     </div>
                 </div>
-            </div><!--banner -->
 
-        </section><!--header--wrapper -->
+                <div class="scroll-down">
+                    <div class="scroll-down__text">Scroll</div>
+                    <div class="scroll-down__bar"></div>
+                </div><!-- /.scroll-down -->
 
+
+            </div><!-- /.banner--wrapper -->
+
+        </section>
+        <!-- /.header--wrapper -->
 
 
         <section class="content--block counter--wrap" id="feat">
@@ -242,7 +255,7 @@
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
                     <div class="title--block__btn slide-up">
-                        <a class="btns" href="#">Find Out More</a>
+                        <a class="btn" href="#">Find Out More</a>
                     </div>
                 </div><!-- title--block -->
 
@@ -280,7 +293,7 @@
                         <h2 class="section--title">Client Stories</h2>
                     </div>
                     <div class="title--block__btn slide-up">
-                        <a href="#" class="btns">View All client Stories</a>
+                        <a href="#" class="btn btn--white">View All client Stories</a>
                     </div>
                 </div>
             </div>
@@ -420,12 +433,611 @@
             </div>
         </section>
 
+        <section class="carousel news">
+            <div class="section-heading">
+                <div class="holder" data-scroll="">
+                    <div class="title--block" data-scroll="">
+                        <div class="title--block__title slide-up">
+                            <h2 class="section--title">We have closed 200+ transactions in the last five years</h2>
+                        </div>
+                        <div class="title--block__btn slide-up">
+                            <a href="#" class="btn ">View All deals</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="holder">
+                <div class="swiper news-swiper">
+                    <div class="swiper-wrapper">
+        
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/benelux.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>Benelux</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> France</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> Germany</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p> Swizerland</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>United Kingdom</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-deals">
+                            <div class="holder">
+                                <div class="image-block ">
+                                    <div class="image--promo" data-scroll="">
+                                        <div class="image--promo__item slide-up">
+                                            <a href="#">
+                                                <div class="image--promo__item_img"
+                                                    style="background-image: url(assets/images/dealsImage.jpg);">
+                                                </div>
+                                                <div class="image--promo_text">
+                                                    <p>Italy</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+
+        
+<section class="partners-wrapper">
+    <div class="holder partners-holder" data-scroll="">
+        <div class="title--block counter--title slide-up">
+            <div class="title--block__title slide-up">
+                <h2 class="section--title">We, our partners and employees, are ambitious minds.</h2>
+            </div>
+            <div class="title--block__info slide-up">
+                <p>As Entrepreneurs we invest significant time to thoroughly understand your business. As a
+                    European Team, we share one culture, values and attitude which we use to guide our clients
+                    through a complicated journey and bring the business to a success – no matter what.</p>
+            </div>
+            <div class="title--block__btn slide-up">
+                <a class="btn" href="#">Join the team</a>
+                <a class="btn" href="#">Meet the team</a>
+            </div>
+        </div><!-- title--block -->
+
+        <div class="feat-list partners-img slide-up">
+            <img src="assets/images/imagePartners.jpg" alt="">
+        </div>
+
+    </div>
+</section>
+
+<section class="carousel deals-wrap">
+    <div class="section-heading">
+        <div class="holder" data-scroll="">
+            <div class="title--block  slide-up">
+                <div class="title--block__title slide-up">
+                    <h2 class="section--title">We have closed 200+ transactions in the last five years</h2>
+                </div>
+                <div class="title--block__btn slide-up">
+                    <a class="btn" href="#">View All Deals</a>
+                </div>
+            </div><!-- title--block -->
+        </div>
+    </div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide swiper-deals">
+                <div class="holder">
+                    <div class="image-block ">
+                        <div class="image--promo" data-scroll="">
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-deals">
+                <div class="holder">
+                    <div class="image-block ">
+                        <div class="image--promo" data-scroll="">
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-deals">
+                <div class="holder">
+                    <div class="image-block ">
+                        <div class="image--promo" data-scroll="">
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-deals">
+                <div class="holder">
+                    <div class="image-block ">
+                        <div class="image--promo" data-scroll="">
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-deals">
+                <div class="holder">
+                    <div class="image-block ">
+                        <div class="image--promo" data-scroll="">
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="image--promo__item slide-up">
+                                <a href="#">
+                                    <div class="image--promo__item_img"
+                                        style="background-image: url(assets/images/dealsImage.jpg);">
+                                    </div>
+                                    <div class="image--promo_text">
+                                        <span>Business Services</span>
+                                        <span>Industrials</span>
+                                        <p> Beno Holding secures real estate financing</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="holder">
+            <div class="swiper-controls cntrl">
+                <div class="swiper-controls__navigation">
+                    <div class="swiper-button-previous quote-prev">
+                        <img src="assets/images/blueLeftArrow.svg" alt="">
+                    </div>
+                    <div class="swiper-button-next quote-next">
+                        <img src="assets/images/blueRightArrow.svg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-controls__progress">
+                    <div class="swiper-pagination quote-progress">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
-
-
-    </div><!--End main wrapper-->
+    </div><!-- /.main--wrapper -->
 
 
     <footer>

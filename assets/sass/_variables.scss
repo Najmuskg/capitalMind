@@ -18,11 +18,16 @@ $browser-context: 16; // Default
   @return #{$pixels/$context}em;
 }
 
+:root {
+  --color-2: #bf0a27;
+}
+
+
 /* ------------------------------------------- */
 /* -- Colours + Variables */
 /* ------------------------------------------- */
 
-$site-width: 1100;
+$site-width: 1160;
 
 // Defsult space
 $space: 20px;
@@ -31,17 +36,17 @@ $font--main: 'Interstate', sans-serif;
 $font--alt: "Arial", sans-serif;
 
 // Body copy colour
+$color--body-copy: #232323;
 $color--gray: #F5F5F5;
 
 // Colours - eidt as needed
 $color--white: #ffffff;
 $color--black: #000000;
 $color--1: #002A60;
-$color--2: #307FD3;
-$color--3: #BF0A27;
+$color--2: #BF0A27;
+$color--3: #307FD3;
 $color--4: #EBEBED;
 $color--5: #BEBEBE;
-$color--6: #232323;
 $color--7: #1D2331;
 
 $breakpoint--main: 768;

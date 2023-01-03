@@ -30,6 +30,11 @@
     max-width: $width;
     width: 100%;
 }
+%bg-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
 @mixin bg-cover {
     background-repeat: no-repeat;
@@ -45,7 +50,7 @@
 }
 
 @mixin animate-line {
-    background-color: $color--6;
+    background-color: $color--body-copy;
     bottom: -2px;
     content: "";
     height: 1px;
@@ -117,7 +122,7 @@
     padding-bottom:rem(20);
 
     &::after {
-        background-color: $color--3;
+        background-color: $color--2;
         bottom: 0;
         content: "";
         height: 1px;
@@ -127,3 +132,14 @@
         transition: all 0.3s ease-in-out 0.4s;
     }
 }
+
+%title-line {
+    background-color: var(--color-2);
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 0;
+    transition: all 0.5s ease-in-out;
+  }

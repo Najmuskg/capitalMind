@@ -49,9 +49,30 @@ $(function () {
   });
 
 
+  $(".searchButton").on("click", function (e) {
+    $("body").removeClass("menu-extended");
+    $(".header").removeClass("nav-open");
+    $(".fullScreen--search").toggleClass("searchActive");
+    $("#search-input").focus();
+  });
+
+  $(".searchClose").on("click", function (e) {
+    $(".fullScreen--search").removeClass("searchActive");
+  });
+
+  $(document).on("keyup", function (evt) {
+    if (
+      evt.keyCode == 27 &&
+      $(".fullScreen--search").hasClass("searchActive")
+    ) {
+      $(".fullScreen--search").removeClass("searchActive");
+    }
+  });
+
    // language--selector
-   $(".language").on("click", function () {
-    $(".language").toggleClass("lang-subOpen");
+   $(".language-slector > span").on("click", function () {
+    $(this).parent().toggleClass("lang-subOpen");
+    $(this).siblings(".langs").slideToggle();
   });
 
   // $(".mobile_menu").simpleMobileMenu({
