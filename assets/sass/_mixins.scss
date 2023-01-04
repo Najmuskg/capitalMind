@@ -1,55 +1,38 @@
 %d-flex {
     display: flex;
     flex-wrap: wrap;
-}
-@mixin d-flex {
+  }
+  @mixin d-flex {
     display: flex;
     flex-wrap: wrap;
-}
-
-@mixin flex-33 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    width: 100%;
-}
-
-@mixin flex-50 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    width: 100%;
-}
-
-@mixin flex-100 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    width: 100%;
-}
-
-@mixin flex($width) {
+  }
+  
+  @mixin flex($width) {
     flex: 0 0 $width;
     max-width: $width;
     width: 100%;
-}
-%bg-cover {
+  }
+  
+  %bg-cover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-
-@mixin bg-cover {
+  
+  @mixin bg-cover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-@mixin cont-padding {
+  }
+  @mixin cont-padding {
     padding: rem(40) 0;
-
+  
     @include breakpoint($breakpoint--main + 0px) {
-        padding: rem(60) 0;
+      padding: rem(60) 0;
     }
-}
-
-@mixin animate-line {
+  }
+  
+  @mixin animate-line {
     background-color: $color--body-copy;
     bottom: -2px;
     content: "";
@@ -58,26 +41,27 @@
     position: absolute;
     width: 0;
     transition: all 0.3s;
-}
-
-@mixin animate-line-hover {
+  }
+  
+  @mixin animate-line-hover {
     left: 0;
     width: 100%;
-}
-
-@mixin block-title {
-    font-family: $font--bold;
+  }
+  
+  @mixin block-title {
+    font-family: $font--main;
+    font-weight: 700;
     font-size: rem(22);
     letter-spacing: -0.01em;
     margin: 0 0 rem(15);
     text-transform: capitalize;
-
+  
     @include breakpoint($breakpoint--main + 0px) {
-        font-size: rem(35);
+      font-size: rem(35);
     }
-}
-
-@mixin overlay--color {
+  }
+  
+  @mixin overlay--color {
     background-color: rgba($color--black, 0.4);
     content: "";
     height: 100%;
@@ -86,9 +70,9 @@
     top: 0;
     width: 100%;
     z-index: 1;
-}
-
-@mixin triangle-arrow {
+  }
+  
+  @mixin triangle-arrow {
     content: "";
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
@@ -99,41 +83,49 @@
     top: 12px;
     width: 0px;
     transition: all 0.3s ease-in-out;
-}
-
-@mixin section-subTitle {
+  }
+  
+  @mixin section-subTitle {
     color: $color--2;
-    font-family: $font--alt;
+    font-family: $font--main;
     font-weight: 500;
     font-size: rem(10);
     line-height: rem(11);
     letter-spacing: 0.09em;
     margin: 0 0 rem(10);
     text-transform: uppercase;
-}
-
-@mixin section--title {
-    font-weight: 300;
-    line-height: 120.5%;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
+  }
+  
+  @mixin section-title {
     color: $color--1;
-    padding-bottom:rem(20);
-
-    &::after {
-        background-color: $color--2;
-        bottom: 0;
-        content: "";
-        height: 1px;
-        left: 0;
-        position: absolute;
-        width: 0;
-        transition: all 0.3s ease-in-out 0.4s;
+    font-family: $font--main;
+    font-weight: 275;
+    font-size: rem(24);
+    letter-spacing: -0.02em;
+    line-height: 120%;
+    margin: 0 0 rem(15);
+    padding-bottom: rem(20);
+    position: relative;
+  
+    @include breakpoint($breakpoint--main + 0px) {
+      font-size: rem(32);
+      line-height: 120%;
+      margin: 0 0 rem(25);
     }
-}
-
-%title-line {
+  
+    &::after {
+      background-color: $color--2;
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 0;
+      transition: all 0.3s ease-in-out 0.4s;
+    }
+  }
+  
+  %title-line {
     background-color: var(--color-2);
     bottom: 0;
     content: "";
@@ -143,3 +135,4 @@
     width: 0;
     transition: all 0.5s ease-in-out;
   }
+  

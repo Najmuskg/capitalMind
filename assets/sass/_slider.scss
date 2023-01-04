@@ -1,313 +1,442 @@
-    .swiper {
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding-top:20px;
-        z-index: 1;
-        .swiper-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            display: flex;
-            transition-property: transform;
-            box-sizing: content-box;
-            transform: translate3d(0px, 0, 0);
+// .swiper-pagination {
+//     margin: rem(20) 0 0;
+//     position: static;
 
-            .swiper-slide {
-                @include bg-cover;
-                flex-shrink: 0;
-                width: 100%;
-                position: relative;
-                transition-property: transform;
-                transform: translateZ(0);
-                backface-visibility: hidden;
-                z-index: 1;
-                padding-bottom: 30px;
+//     .swiper-pagination-bullet {
+//         background-color: transparent;
+//         border: 1px solid #707070;
+//         height: 10px;
+//         opacity: 1;
+//         width: 10px;
 
-                .holder {
-                    @media (min-width: 768px) {
-                        display: flex;
-                        justify-content: space-between;
-                        padding-top: 20px;
-                        flex-direction: row;
-                    }
-                    .heading-info {
-                        padding-top: 20px;
-                        margin-left: 0;
-                        @include breakpoint($breakpoint--main + 0px) {
-                            margin-left: rem(45);
-                         }
-                        p {
-                            color: $color--white;
-                            font-weight: 300;
-                            font-size: rem(18px);
-                            line-height: 164%;
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.02em;
-                            max-width: 470px;
-                            margin-top: 20px;
-                            &:last-child {
-                                font-weight: 700;
-                                font-size: rem(13px);
-                                line-height: 163%;
-                                margin-top: 30px;
-                            }
-                        }
-                    }
-                }
-            }
-            .swiper-deals {
-                // height: 430px;
-                .holder {
-                    display: block;
-                    .deals-img_item {
-                        position: relative;
-                        border-radius: 10px;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
-                            border-radius: 10px;
-                        }
-                        img {
-                            border-radius: 10px;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-
-        .holder {
-            .swiper-controls {
-                display: flex;
-                align-items: center;
-                .swiper-controls__navigation {
-                    align-items: center;
-                    display: flex;
-                    .swiper-button-previous {
-                        color: $color--white;
-                        border-radius: 73px;
-                        cursor: pointer;
-                        display: flex;
-                        flex-wrap: wrap;
-                        align-items: center;
-                        justify-content: center;
-                        height: auto;
-                        margin-right: 0.625rem;
-                        position: static;
-
-                        &.swiper-button-disabled {
-                            pointer-events: none;
-                            opacity: 0.5;
-                        }
-                        img {
-                            height: auto;
-                            width: 26px;
-                        }
-                    }
-                    .swiper-button-next {
-                        color: $color--white;
-                        border-radius: 73px;
-                        cursor: pointer;
-                        display: flex;
-                        flex-wrap: wrap;
-                        align-items: center;
-                        justify-content: center;
-                        height: auto;
-                        margin: 0;
-                        position: static;
-                        margin-left: 5px;
-                        margin-right: 11.5px;
-                        &::after{
-                            display: none;
-                        }
-                        img {
-                            height: auto;
-                            width: 26px;
-                        }
-                    }
-                }
-                .swiper-controls__progress {
-                    align-items: center;
-                    display: flex;
-                    flex-grow: 1;
-                    margin-left: 0.625rem;
-                    .swiper-pagination-progressbar {
-                        background: $color--white;
-                        height: 1px;
-                        position: relative;
-                        width: 100%;
-                        span {
-                            background: $color--white;
-                            height: 3px;
-                            left: 0;
-                            position: absolute;
-                            top: -1px;
-                            transform-origin: left top;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         &.swiper-pagination-bullet-active {
+//             background-color: $color--4;
+//             border-color: $color--4;
+//         }
+//     }
+// }
 
 // .swiper-controls {
-//     display: flex;
-//     // flex-wrap: wrap;
-//     align-items: center;
-//     margin: rem(20) auto 0;
+//     @include d-flex;
+//     margin-top: rem(20);
 
-//     @include breakpoint($breakpoint--main + 0px) {
-//         margin: rem(40) auto 0;
+//     &__progress {
+//         @include flex-100;
+//         margin-bottom: rem(3);
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             margin-bottom: rem(7);
+//         }
+
+//         .swiper-pagination-progressbar {
+//             background-color: rgba($color--white, 0.5);
+//             height: 1px;
+
+//             .swiper-pagination-progressbar-fill {
+//                 background: $color--white;
+//             }
+//         }
+
+//         .swiper-pagination {
+//             margin: 0;
+//         }
+//     }
+
+//     &__fraction,
+//     &__navigation {
+//         @include flex-50;
+//     }
+//     &__fraction {
+//         font-size: rem(14);
+//         letter-spacing: 0.02em;
 //     }
 
 //     &__navigation {
-//         align-items: center;
-//         display: flex;
+//         @include d-flex;
+//         justify-content: flex-end;
 
 //         .swiper-button-next,
-//         .swiper-button-previous {
-//             background-color: $color--1;
-//             border-radius: 73px;
-//             cursor: pointer;
-//             display: flex;
-//             flex-wrap: wrap;
-//             align-items: center;
-//             justify-content: center;
-//             height: 40px;
-//             margin: 0;
+//         .swiper-button-prev {
+//             height: auto;
+//             margin-top: 0;
 //             position: static;
-//             width: 70px;
+//             width: 30px;
+
+//             @include breakpoint($breakpoint--main + 0px) {
+//                 width: 50px;
+//             }
 
 //             &::after {
 //                 content: none;
 //             }
 
 //             svg {
-//                 height: auto;
-//                 width: 34px;
-//             }
-
-//             .arrow-link_angle {
-//                 background-color: $color--white;
-
-//                 &::before,
-//                 &::after {
-//                     background-color: $color--white;
+//                 * {
+//                     transition: all 0.3s ease-in-out;
 //                 }
-//             }
-//             &.swiper-button-disabled {
-//                 pointer-events: none;
-//                 opacity: 0.5;
 //             }
 
 //             &:hover {
-//                 background-color: $color--2;
+//                 svg {
+//                     * {
+//                         fill: $color--1;
+//                     }
+//                 }
 //             }
 //         }
 
-//         .swiper-button-previous {
-//             .arrow-link_angle {
-//                 transform: rotate(180deg);
-//             }
-//         }
-
-//         &:last-child {
-//             margin-left: auto;
-
-//             @include breakpoint($breakpoint--main + 0px) {
-//                 margin-left: 0;
-//             }
-//         }
-//     }
-
-//     &__progress {
-//         align-items: center;
-//         display: flex;
-//         flex-grow: 1;
-//         margin-left: rem(10);
-
-//         .swiper-pagination-progressbar {
-//             background: rgba($color--1, 0.5);
-//             height: 2px;
-//             position: relative;
-//             width: 100%;
-
-//             span {
-//                 background: $color--1;
-//                 height: 100%;
-//                 left: 0;
-//                 position: absolute;
-//                 top: 0;
-//                 transform-origin: left top;
-//                 width: 100%;
-//             }
-//         }
-//     }
-
-//     &__bullets {
-//         display: none;
-
-//         @include breakpoint($breakpoint--main + 0px) {
-//             align-items: center;
-//             display: flex;
-//             flex-grow: 1;
+//         .swiper-button-prev {
+//             margin-right: rem(10);
 //         }
 //     }
 // }
 
-// .swiper-pagination {
-//     display: flex;
-//     flex-wrap: wrap;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
+// .partnersSlider {
+//     overflow: visible;
 
-//     &-bullet {
-//         background-color: $color--1;
-//         display: block;
-//         cursor: pointer;
-//         border-radius: 0;
-//         height: 2px;
-//         margin: 0 rem(5) 0;
-//         opacity: 0.5;
-//         width: 53px;
+//     .swiper-wrapper {
+//         align-items: center;
+//         padding: 0 0 rem(20);
 
 //         @include breakpoint($breakpoint--main + 0px) {
-//             margin: 0 rem(5);
+//             padding: rem(60) 0;
+//         }
+//     }
+
+//     .swiper-slide {
+//         display: flex;
+//         align-items: center;
+//         width: 280px;
+//         padding-right: rem(60);
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             padding-right: rem(100);
+//             width: 320px;
 //         }
 
-//         &.swiper-pagination-bullet-active {
-//             background-color: $color--1;
-//             cursor: default;
-//             opacity: 1;
+//         &:last-child {
+//             padding-right: 0;
 //         }
+
+//         img {
+//             max-width: 100%;
+//             max-height: 55px;
+//         }
+//     }
+// }
+
+// // ========== Timeline Slider ===========
+
+// .timeline--wrap {
+// }
+
+// .timelineSlider {
+//     height: 100vh;
+
+//     @include breakpoint($breakpoint--main + 0px) {
+//         height: 710px;
+//     }
+//     .swiper-wrapper {
+//         transition: 1s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+//     }
+
+//     .swiper-slide {
+//         &.swiper-slide-active {
+//             .timeline--items {
+//                 &__info {
+//                     > * {
+//                         opacity: 1;
+//                         transform: translate3d(0, 0, 0);
+//                         transition: 0.4s ease 0.6s;
+
+//                         @for $i from 1 through 15 {
+//                             &:nth-child(#{$i}) {
+//                                 transition-delay: 1.4s + ($i * 0.1);
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .timeline-pagination {
+//         @include d-flex;
+//         flex-direction: column;
+
+//         position: absolute;
+//         right: 0;
+//         text-align: left;
+//         width: 40px;
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             width: 260px;
+//         }
+
+//         .swiper-pagination-bullet {
+//             background-color: transparent;
+//             border: none;
+//             color: $color--white;
+//             display: block;
+//             font-size: rem(10);
+//             height: auto;
+//             line-height: 140%;
+//             margin: 0;
+//             opacity: 0.5;
+//             letter-spacing: 0.115em;
+//             padding-right: rem(50);
+//             position: relative;
+//             text-transform: uppercase;
+//             width: 100%;
+//             transition: all 0.3s ease-in-out;
+
+//             @include breakpoint(max-width $breakpoint--main - 1px) {
+//                 padding-right: 0;
+//                 text-indent: -99999px;
+//             }
+
+//             &::after {
+//                 background-color: rgba($color--white, 0.5);
+//                 content: "";
+//                 height: 2px;
+//                 position: absolute;
+//                 right: 0;
+//                 top: rem(6);
+//                 width: 17px;
+//                 transition: all 0.5s ease-in-out;
+
+//                 @include breakpoint($breakpoint--main + 0px) {
+//                     width: 25px;
+//                 }
+//             }
+
+//             &.swiper-pagination-bullet-active {
+//                 opacity: 1;
+
+//                 &::after {
+//                     background-color: $color--white;
+//                     width: 32px;
+
+//                     @include breakpoint($breakpoint--main + 0px) {
+//                         width: 45px;
+//                     }
+//                 }
+//             }
+
+//             + .swiper-pagination-bullet {
+//                 margin: rem(15) 0 0;
+
+//                 @include breakpoint($breakpoint--main + 0px) {
+//                     margin: rem(25) 0 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .timeline--items {
+//     @include bg-cover;
+//     @include d-flex;
+//     align-items: flex-end;
+//     height: 100%;
+//     padding: 0 0 rem(60);
+//     position: relative;
+
+//     &::after {
+//         background: linear-gradient(180deg, rgba(36, 45, 63, 0) 0%, #242d3f 100%);
+//         content: "";
+//         height: 100%;
+//         left: 0;
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         z-index: 0;
+//     }
+
+//     .holder {
+//         position: relative;
+//         width: 100%;
+//         z-index: 2;
+//     }
+
+//     &__info {
+//         max-width: 560px;
+
+//         > * {
+//             transform: translate3d(-20px, 0, 0);
+//             opacity: 0;
+//             transition: 0.2s ease 0.4s;
+
+//             @for $i from 1 through 15 {
+//                 &:nth-child(#{$i}) {
+//                     transition-delay: 0.2s + ($i * 0.1);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .galleryThumbSwiper {
+//     .swiper-slide {
+//         &.swiper-slide-active {
+//             .gallery--items {
+//                 &__desc {
+//                     h3 {
+//                         opacity: 1;
+//                         transform: translate3d(0, 0, 0);
+//                         transition: 0.4s ease 0.3s;
+//                     }
+
+//                     &_text {
+//                         > * {
+//                             opacity: 1;
+//                             transform: translate3d(0, 0, 0);
+//                             transition: 0.4s ease 0.6s;
+
+//                             @for $i from 1 through 15 {
+//                                 &:nth-child(#{$i}) {
+//                                     transition-delay: 0.4s + ($i * 0.1);
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .swiper-controls {
+//         margin: 0;
+//         padding: rem(20);
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             display: none;
+//             max-width: $site-width + px;
+//             margin: 0 auto;
+//             padding: 0 rem(50);
+//         }
+//     }
+// }
+
+// .gallery--items {
+//     background-repeat: no-repeat;
+//     background-size: auto 450px;
+//     background-position: top center;
+//     min-height: 450px;
+//     position: relative;
+
+//     @include breakpoint($breakpoint--main + 0px) {
+//         @include bg-cover;
+//         height: 710px;
+//     }
+
+//     &::after {
+//         background: linear-gradient(to bottom, rgba(36, 45, 63, 0) 0%, #242d3f 100%);
+//         content: "";
+//         height: 70%;
+//         left: 0;
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         z-index: 0;
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             height: 100%;
+//         }
+//     }
+
+//     .holder {
+//         height: 100%;
+//         z-index: 2;
+//     }
+
+//     &__desc {
+//         padding: rem(40) 0;
+
+//         @include breakpoint($breakpoint--main + 0px) {
+//             @include d-flex;
+//             max-width: 560px;
+//             height: 100%;
+//         }
+
+//         h3 {
+//             font-size: rem(22);
+//             margin: 0;
+//             opacity: 0;
+//             transform: translate3d(-20px, 0, 0);
+//             transition: 0.2s ease 0.4s;
+
+//             @include breakpoint($breakpoint--main + 0px) {
+//                 font-size: rem(36);
+//                 width: 100%;
+//             }
+//         }
+
+//         &_text {
+//             padding-top: rem(410);
+
+//             @include breakpoint($breakpoint--main + 0px) {
+//                 margin-top: auto;
+//                 padding-top: 0;
+//             }
+
+//             > * {
+//                 opacity: 0;
+//                 transform: translate3d(-20px, 0, 0);
+//                 transition: 0.2s ease 0.4s;
+
+//                 @for $i from 1 through 15 {
+//                     &:nth-child(#{$i}) {
+//                         transition-delay: 0.4s + ($i * 0.1);
+//                     }
+//                 }
+//             }
+
+//             p {
+//                 line-height: 150%;
+//             }
+//         }
+//     }
+// }
+
+// .thumb-wrapper {
+//     transition-delay: 0.2s;
+
+//     @include breakpoint(max-width $breakpoint--main - 1px) {
+//         display: none;
+//     }
+// }
+
+// .thumbSwiper {
+//     padding: rem(35) 0;
+
+//     .swiper-slide {
+//         &.swiper-slide-thumb-active {
+//             .thumb--item {
+//                 &::after {
+//                     left: 0;
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .thumb--item {
+//     @include bg-cover;
+//     cursor: pointer;
+//     height: 135px;
+//     position: relative;
+//     width: 100%;
+
+//     &::after {
+//         background-color: $color--1;
+//         bottom: 0;
+//         content: "";
+//         height: 4px;
+//         right: 0;
+//         position: absolute;
+//         width: 0;
+//         transition: all 0.5s ease-in-out;
 //     }
 // }

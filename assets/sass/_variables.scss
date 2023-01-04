@@ -22,7 +22,6 @@ $browser-context: 16; // Default
   --color-2: #bf0a27;
 }
 
-
 /* ------------------------------------------- */
 /* -- Colours + Variables */
 /* ------------------------------------------- */
@@ -32,21 +31,20 @@ $site-width: 1160;
 // Defsult space
 $space: 20px;
 
-$font--main: 'Interstate', sans-serif;
-$font--alt: "Arial", sans-serif;
+$font--main: "interstate", sans-serif;
+
 
 // Body copy colour
 $color--body-copy: #232323;
-$color--gray: #F5F5F5;
+$color--gray: #f8f8f8;
 
 // Colours - eidt as needed
 $color--white: #ffffff;
 $color--black: #000000;
-$color--1: #002A60;
-$color--2: #BF0A27;
-$color--3: #307FD3;
+$color--1: #002a60;
+$color--2: #bf0a27;
+$color--3: #307fd3;
 $color--4: #EBEBED;
-$color--5: #BEBEBE;
-$color--7: #1D2331;
+$color--5: #1D2331;
 
 $breakpoint--main: 768;
