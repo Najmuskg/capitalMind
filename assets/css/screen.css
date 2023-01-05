@@ -4112,9 +4112,19 @@ ul.footer-nav li:last-child a:hover {
   }
 }
 
+.partners--wrap {
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .partners--wrap .holder {
-    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 700px;
   }
 }
 
@@ -4125,14 +4135,14 @@ ul.footer-nav li:last-child a:hover {
 @media (min-width: 768px) {
   .partners--wrap .holder .partners--info {
     max-width: 500px;
-    position: relative;
-    top: 180px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .partners--wrap__img {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 100px;
   }
 }
 

@@ -106,33 +106,34 @@
 }
 
 .partners--wrap {
+    position: relative;
+    @include breakpoint($breakpoint--main + 0px) {
+        // padding:0 0 400px 0;
+    }
     .holder {
+
         @include breakpoint($breakpoint--main + 0px) {
-            // @include d-flex;
-            // flex-wrap: nowrap;
-            // align-items: center;
-            // justify-content: space-between;
-            // gap: rem(30px)
-            position: relative;
-            // bottom: 400px;
-            // left: 213px;
-            // clear: both;
+            display: flex;
+            align-items: center;
+            min-height: 700px;
         }
         .partners--info {
             padding-top: 20px;
             @include breakpoint($breakpoint--main + 0px) {
-                // @include flex(47%);
                 max-width: 500px;
-                position: relative;
-                top: 180px;
             }
         }
     }
     &__img {
-        @include breakpoint($breakpoint--main + 0px) {
-            // @include flex(53%);
-            float: right;
-            // position: relative;
+        // @include breakpoint( max-width $breakpoint--main + 532px) {
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        // }
+        @include breakpoint($breakpoint--main + 632px) {
+            position: absolute;
+            top: 0;
+            right: 100px;
         }
     }
 
