@@ -133,7 +133,6 @@
   //   &::after {
   //     bottom: -4px;
   //   }
-   
 
   &:hover {
     background-color: $color--1;
@@ -286,7 +285,7 @@
 
     &:hover {
       background-color: $color--white;
-
+      color: $color--3;
       span {
         color: $color--3;
       }
@@ -309,11 +308,10 @@
     }
   }
 
-  &.btn--block__title{
-    margin:0 0 0;
+  &.btn--block__title {
+    margin: 0 0 0;
   }
 }
-
 
 .text-center {
   .btn--load {
@@ -842,7 +840,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
 .jarallax {
   height: 100%;
   left: 0;
@@ -864,16 +861,14 @@ input[type="search"]::-webkit-search-results-decoration {
     color: $color--white;
 
     &::after {
-      background-color: $color--white;
+      background-color: $color--2;
     }
   }
-  .btn--block__title{
-    
-    .btn{
-      &:hover{
+  .btn--block__title {
+    .btn {
+      &:hover {
         color: $color--1;
       }
     }
-    
   }
 }

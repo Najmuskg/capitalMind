@@ -333,6 +333,7 @@ p {
 
 .btn.btn--white:hover {
   background-color: #ffffff;
+  color: #307fd3;
 }
 
 .btn.btn--white:hover span {
@@ -907,7 +908,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .bg-blue .section--title::after {
-  background-color: #ffffff;
+  background-color: #bf0a27;
 }
 
 .bg-blue .btn--block__title .btn:hover {
@@ -4885,5 +4886,35 @@ img.mfp-img {
   -webkit-transform: scale(1.04);
       -ms-transform: scale(1.04);
           transform: scale(1.04);
+}
+
+.clientSlider .holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 0 20px;
+}
+
+.clientSlider .holder .client--img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
+}
+
+.clientSlider .holder .client--info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  width: 100%;
 }
 /*# sourceMappingURL=screen.css.map */

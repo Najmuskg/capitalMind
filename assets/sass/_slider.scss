@@ -122,7 +122,7 @@
 
 .image--promo {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     @include breakpoint($breakpoint--main + 0px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -201,6 +201,20 @@
     }
 }
 
+.clientSlider {
+    .holder {
+        @include d-flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0 20px;
+        .client--img {
+            @include flex(50%);
+        }
+        .client--info {
+            @include flex(50%);
+        }
+    }
+}
 
 // .swiper-pagination {
 //     margin: rem(20) 0 0;
