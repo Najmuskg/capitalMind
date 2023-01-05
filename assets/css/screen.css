@@ -4114,40 +4114,25 @@ ul.footer-nav li:last-child a:hover {
 
 @media (min-width: 768px) {
   .partners--wrap .holder {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 1.875rem;
+    position: relative;
   }
+}
+
+.partners--wrap .holder .partners--info {
+  padding-top: 20px;
 }
 
 @media (min-width: 768px) {
   .partners--wrap .holder .partners--info {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 47%;
-            flex: 0 0 47%;
-    max-width: 47%;
-    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 180px;
   }
 }
 
 @media (min-width: 768px) {
   .partners--wrap__img {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 53%;
-            flex: 0 0 53%;
-    max-width: 53%;
-    width: 100%;
+    float: right;
   }
 }
 
