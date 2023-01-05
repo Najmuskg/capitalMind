@@ -86,20 +86,18 @@ $(function () {
   //   "menuStyle": "slide"
   // });
 
-  /* Sticky Menu */
-  /* ------------------------------------------- */
+  /*========== Sticky Menu =========*/
+
   $(".toggle-menu").on("click", function () {
     $("body").toggleClass("menu-extended");
     $("header").toggleClass("nav-open");
     $(".secondary-nav").removeClass("sub-menu-open");
     $(".menu-item-has-children").removeClass("open");
-  });
+  });/*========== End of Sticky Menu =========*/
+   
 
-
-  // End of Sticky Menu
-
-  /* Filter drop down */
-  /* ------------------------------------------- */
+  /*========== Filter drop down =========*/
+  
   $(".filter-title").click(function () {
     $(this).data("clicked", true);
     var $this = $(this);
@@ -110,12 +108,10 @@ $(function () {
 
   $(".cloak").click(function () {
     $(this).parent().removeClass("filter-active");
-  });
-  // End of Filter drop down
+  });/*========== End of Filter drop down =========*/
 
 
-  /* Footer Menu Slide Mobile */
-  /* ------------------------------------------- */
+ /*========== Footer Menu Slide Mobile =========*/
 
   if ($(window).width() < 768) {
     $(".filters--title").on("click", function () {
@@ -132,11 +128,11 @@ $(function () {
       $(this).toggleClass("scroll-nav-open");
       $(this).siblings(".scroller__nav").slideToggle();
     });
-  }
-  // End of Footer Menu Slide Mobile
+  }/*========== End Of Footer Menu Slide Mobile =========*/
 
-  /* Footer Menu Slide Mobile */
-  /* ------------------------------------------- */
+
+/*========== Scroll Down =========*/  
+
   $('.scroll--nav a[href^="#"]').on("click", function (event) {
     var target = $(this.getAttribute("href"));
     if (target.length) {
@@ -150,19 +146,17 @@ $(function () {
           1000
         );
     }
-  });
-  // End of Footer Menu Slide Mobile
+  });/*========== End Of Scroll Down =========*/
 
-  /* Language Selector */
-  /* ------------------------------------------- */
+
+/*========== Language Selector =========*/
 
   $(".nav-toggle").on("click", function () {
     $(this).toggleClass("footer-menu-expand");
     $('.footer--nav').slideToggle();
+  });/*========== End Of Language Selector =========*/
 
-  });
 
-  // End of Language Selector
 
   /* Parallax Effect on scroll */
   /* ------------------------------------------- */
@@ -226,6 +220,37 @@ $(function () {
   new Swiper(".swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
+    pagination: {
+      el: ".quote-progress",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+      
+    },
+
+  });
+
+  // new Swiper(".transactionSlider", {
+  //   slidesPerView: 2,
+  //   freeMode: true,
+  //   loop: false,
+  //   spaceBetween: 10,
+  //   pagination: {
+  //     el: ".transaction-progress",
+  //     type: "progressbar",
+  //   },
+  //   navigation: {
+  //     nextEl: ".transaction-next",
+  //     prevEl: ".transaction-prev",
+  //   },
+  // });
+
+  new Swiper(".transactionSlider", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    speed: 500,
     pagination: {
       el: ".quote-progress",
       type: "progressbar",
