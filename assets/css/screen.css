@@ -4116,6 +4116,10 @@ ul.footer-nav li:last-child a:hover {
   position: relative;
 }
 
+.partners--wrap .holder {
+  min-height: 872px;
+}
+
 @media (min-width: 768px) {
   .partners--wrap .holder {
     display: -webkit-box;
@@ -4128,21 +4132,34 @@ ul.footer-nav li:last-child a:hover {
   }
 }
 
-.partners--wrap .holder .partners--info {
-  padding-top: 20px;
-}
-
 @media (min-width: 768px) {
   .partners--wrap .holder .partners--info {
     max-width: 500px;
+    width: 50%;
   }
 }
 
-@media (min-width: 1400px) {
+.partners--wrap__img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 22%;
+}
+
+@media (min-width: 768px) {
   .partners--wrap__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     position: absolute;
-    top: 0;
-    right: 100px;
+    top: 0%;
+    right: 8%;
+    height: 100%;
+    width: 40%;
   }
 }
 

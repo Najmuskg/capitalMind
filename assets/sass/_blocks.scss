@@ -112,28 +112,34 @@
     }
     .holder {
 
+        min-height: 872px;
         @include breakpoint($breakpoint--main + 0px) {
             display: flex;
             align-items: center;
             min-height: 700px;
         }
         .partners--info {
-            padding-top: 20px;
             @include breakpoint($breakpoint--main + 0px) {
                 max-width: 500px;
+                width: 50%;
             }
         }
     }
     &__img {
-        // @include breakpoint( max-width $breakpoint--main + 532px) {
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        // }
-        @include breakpoint($breakpoint--main + 632px) {
+        @include bg-cover;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 22%;
+        @include breakpoint($breakpoint--main + 0px) {
+            @include bg-cover;
             position: absolute;
-            top: 0;
-            right: 100px;
+            top: 0%;
+            right: 8%;
+            height: 100%;
+            width: 40%;
+           
         }
     }
 
