@@ -4157,9 +4157,9 @@ ul.footer-nav li:last-child a:hover {
     background-size: cover;
     position: absolute;
     top: 0%;
-    right: 8%;
+    right: 0%;
     height: 100%;
-    width: 40%;
+    width: 50%;
   }
 }
 
