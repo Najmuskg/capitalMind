@@ -39,6 +39,54 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Moderat Extended';
+  src: url("../fonts/Moderat-Extended-Light.woff2") format("woff2"), url("../fonts/Moderat-Extended-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat Mono';
+  src: url("../fonts/Moderat-Mono-Light.woff2") format("woff2"), url("../fonts/Moderat-Mono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat Extended';
+  src: url("../fonts/Moderat-Extended-Light.woff2") format("woff2"), url("../fonts/Moderat-Extended-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat Extended';
+  src: url("../fonts/Moderat-Extended-Light.woff2") format("woff2"), url("../fonts/Moderat-Extended-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat Mono';
+  src: url("../fonts/Moderat-Mono-Light.woff2") format("woff2"), url("../fonts/Moderat-Mono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderat Mono';
+  src: url("../fonts/Moderat-Mono-Light.woff2") format("woff2"), url("../fonts/Moderat-Mono-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 /* ------------------------------------------- */
 /* -- Reset */
@@ -4819,21 +4867,18 @@ img.mfp-img {
           transform: scale(1.04);
 }
 
-.clientSlider .holder {
+.clientSlider .client--wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  gap: 0 20px;
+  gap: 0 45px;
 }
 
-.clientSlider .holder .client--img {
+.clientSlider .client--wrap .client--img {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -4841,11 +4886,42 @@ img.mfp-img {
   width: 100%;
 }
 
-.clientSlider .holder .client--info {
+.clientSlider .client--wrap .client--info {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
   max-width: 50%;
   width: 100%;
+}
+
+.clientSlider .client--wrap .client--info h3 {
+  font-family: "Moderat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 85.7632px;
+  color: #307fd3;
+  margin: 0;
+}
+
+.clientSlider .client--wrap .client--info .client--info_text p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 164%;
+  letter-spacing: -0.02em;
+}
+
+.clientSlider .client--wrap .client--info .client--info__name_heading p {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 163%;
+  margin-top: 30px;
+}
+
+.clientSlider .swiper-controls__progress .swiper-pagination-progressbar {
+  background: #ffffff;
+}
+
+.clientSlider .swiper-controls__progress .swiper-pagination-progressbar span {
+  background: #ffffff;
 }
 /*# sourceMappingURL=screen.css.map */
