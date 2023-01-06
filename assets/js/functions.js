@@ -247,10 +247,13 @@ $(function () {
   //   },
   // });
 
-  new Swiper(".transactionSlider", {
-    slidesPerView: "auto",
+ new Swiper(".transactionSlider", {
+    slidesPerView: 2,
+     grid: {
+       rows: 2,
+     },
     spaceBetween: 10,
-    speed: 500,
+    // speed: 500,
     pagination: {
       el: ".quote-progress",
       type: "progressbar",
@@ -260,8 +263,14 @@ $(function () {
       prevEl: ".quote-prev",
       
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    },
 
   });
+
 
   // new Swiper(".dealsSlider", {
   //   slidesPerView: "auto",
