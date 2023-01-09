@@ -148,6 +148,13 @@ $(function () {
     }
   });/*========== End Of Scroll Down =========*/
 
+  /*========== Scroll Top =========*/
+
+  $(".backTop").on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: "0" }, "slow");
+  });/*========== End Of Scroll TOp =========*/
+
 
 /*========== Language Selector =========*/
 
@@ -217,9 +224,10 @@ $(function () {
   //   },
   // });
 
-  new Swiper(".swiper", {
-    slidesPerView: 1,
+  new Swiper(".clientSlider", {
+    slidesPerView: "auto",
     spaceBetween: 0,
+    
     pagination: {
       el: ".quote-progress",
       type: "progressbar",
@@ -231,9 +239,37 @@ $(function () {
     },
 
   });
+  new Swiper(".newsSlider", {
+    slidesPerView: 1,
+    freeMode: true,
+    spaceBetween: 10,
+    pagination: {
+      el: ".quote-progress",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+      
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        
+      },
+    },
+
+  });
+  new Swiper(".globalSLider", {
+    slidesPerView:"auto",
+    freeMode: true,
+    spaceBetween: 10,
+
+
+  });
 
   new Swiper(".transactionSlider", {
-    slidesPerView: 2,
+    slidesPerView: 1,
     grid: {
       rows: 2,
     },
@@ -250,6 +286,7 @@ $(function () {
     breakpoints: {
       768: {
         slidesPerView: 3,
+        
       },
     },
   });
@@ -286,6 +323,18 @@ $(function () {
   //     prevEl: ".teams-button-prev",
   //   },
   // });
+  // speed:800,
+  //   grabCursor: true,
+  //   effect: "creative",
+  //   creativeEffect: {
+  //     prev: {
+  //       shadow: true,
+  //       translate: ["-20%", 0, -1],
+  //     },
+  //     next: {
+  //       translate: ["100%", 0, 0],
+  //     },
+  //   },
 
 
   // End of Sliders

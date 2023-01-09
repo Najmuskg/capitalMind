@@ -103,13 +103,136 @@
     }
 }
 
+.image--promo {
+    height: 100%;
+    width: 100%;
+    .image--promo__item {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100%;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
+            top: 0;
+            left: 0;
+        }
+        .image--promo__img {
+            background-repeat: no-repeat;
+            background-position: none;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 0.5s ease-in-out;
+        }
+        .image--promo_text {
+            padding: 0 0 30px 25px;
+            position: relative;
+            z-index: 1;
+            span {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 26px;
+                color: #fff;
+                padding: 5px 6px;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+            p {
+                max-width: 308px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 122%;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.02em;
+                color: #fff;
+                z-index: 1;
+                position: relative;
+                margin-top: 25px;
+            }
+        }
+        &:hover {
+            .image--promo__img {
+                transform: scale(1.04);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.clientSlider {
+    .client--wrap {
+        @include breakpoint($breakpoint--main + 0px) {
+            @include d-flex;
+            flex-wrap: nowrap;
+            gap: 0 45px;
+        }
+        .client--img {
+            @include breakpoint($breakpoint--main + 0px) {
+                @include flex(50%);
+            }
+        }
+        .client--info {
+
+            h3 {
+                font-family: "Moderat";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 85.7632px;
+                color: $color--3;
+                margin: 0;
+            }
+            .client--info_text {
+                p {
+                    font-weight: 300;
+                    font-size: rem(18);
+                    line-height: 164%;
+                    letter-spacing: -0.02em;
+                }
+            }
+            .client--info__name_heading {
+                p {
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 163%;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+.globalSLider {
+    .swiper-slide {
+        .image--promo__item {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 71.39%);
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
 .partners--wrap {
     position: relative;
     @include breakpoint($breakpoint--main + 0px) {
         // padding:0 0 400px 0;
     }
     .holder {
-
         min-height: 872px;
         @include breakpoint($breakpoint--main + 0px) {
             display: flex;
@@ -137,26 +260,22 @@
             right: 0%;
             height: 100%;
             width: 50%;
-           
         }
     }
-
-    // .partners--info{
-    //     @include flex(100%);
-
-    //     @include breakpoint($breakpoint--main + 0px) {
-    //         @include flex(30%);
-    //     }
-    // }
-    // .partners--img{
-    //     @include flex(100%);
-
-    //     @include breakpoint($breakpoint--main + 0px) {
-    //         @include flex(70%);
-    //     }
-    // }
 }
 
+.backTop {
+    @include d-flex;
+    align-items: center;
+    height: 55px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 // .content--block {
 //     overflow: hidden;
 //     padding: rem(60) 0;
