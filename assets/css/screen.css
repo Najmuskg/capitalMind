@@ -2800,7 +2800,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /**
- * Swiper 8.0.7
+ * Swiper 8.4.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -2808,7 +2808,7 @@ input[type="search"]::-webkit-search-results-decoration {
  *
  * Released under the MIT License
  *
- * Released on: March 4, 2022
+ * Released on: November 21, 2022
  */
 @font-face {
   font-family: swiper-icons;
@@ -3076,12 +3076,21 @@ input[type="search"]::-webkit-search-results-decoration {
   pointer-events: none;
 }
 
+.swiper-button-next.swiper-button-hidden, .swiper-button-prev.swiper-button-hidden {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-navigation-disabled .swiper-button-next, .swiper-navigation-disabled .swiper-button-prev {
+  display: none !important;
+}
+
 .swiper-button-next:after, .swiper-button-prev:after {
   font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
   text-transform: none !important;
   letter-spacing: 0;
-  text-transform: none;
   font-variant: initial;
   line-height: 1;
 }
@@ -3121,6 +3130,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
+}
+
+.swiper-pagination-disabled > .swiper-pagination, .swiper-pagination.swiper-pagination-disabled {
+  display: none !important;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -3312,7 +3325,11 @@ button.swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.swiper-horizontal > .swiper-scrollbar {
+.swiper-scrollbar-disabled > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-disabled {
+  display: none !important;
+}
+
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: absolute;
   left: 1%;
   bottom: 3px;
@@ -3321,7 +3338,7 @@ button.swiper-pagination-bullet {
   width: 98%;
 }
 
-.swiper-vertical > .swiper-scrollbar {
+.swiper-scrollbar.swiper-scrollbar-vertical, .swiper-vertical > .swiper-scrollbar {
   position: absolute;
   right: 3px;
   top: 1%;
@@ -3393,7 +3410,7 @@ button.swiper-pagination-bullet {
   border-top-color: transparent;
 }
 
-.swiper-slide-visible .swiper-lazy-preloader {
+.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader, .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader {
   -webkit-animation: swiper-preloader-spin 1s infinite linear;
           animation: swiper-preloader-spin 1s infinite linear;
 }
@@ -3407,6 +3424,10 @@ button.swiper-pagination-bullet {
 }
 
 @-webkit-keyframes swiper-preloader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -3414,6 +3435,10 @@ button.swiper-pagination-bullet {
 }
 
 @keyframes swiper-preloader-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -4651,15 +4676,108 @@ img.mfp-img {
   }
 }
 
-.swiper-grid-column > .swiper-wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.transactionSlider {
+  width: 100%;
+  height: 775px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
 }
 
 .swiper-slide {
-  margin-top: 10px !important;
+  height: calc((100% - 30px) / 2) !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image--promo {
+  height: 100%;
+  width: 100%;
+}
+
+.image--promo .image--promo__item {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+  position: relative;
+}
+
+.image--promo .image--promo__item::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(13.43%, rgba(0, 0, 0, 0.9)), color-stop(53.93%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
+  top: 0;
+  left: 0;
+}
+
+.image--promo .image--promo__item .image--promo__img {
+  background-repeat: no-repeat;
+  background-position: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.image--promo .image--promo__item .image--promo_text {
+  padding: 0 0 30px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.image--promo .image--promo__item .image--promo_text span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+  color: #fff;
+  padding: 5px 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.image--promo .image--promo__item .image--promo_text p {
+  max-width: 308px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 122%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.02em;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  margin-top: 25px;
+}
+
+.image--promo .image--promo__item:hover .image--promo__img {
+  -webkit-transform: scale(1.04);
+      -ms-transform: scale(1.04);
+          transform: scale(1.04);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .swiper-controls {
@@ -4771,100 +4889,6 @@ img.mfp-img {
       -ms-transform-origin: left top;
           transform-origin: left top;
   width: 100%;
-}
-
-.image--promo__item {
-  width: 100%;
-}
-
-.image--promo__item a {
-  text-decoration: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  height: 22.1875rem;
-  width: 100%;
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-radius: 10px;
-}
-
-.image--promo__item a::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(13.43%, rgba(0, 0, 0, 0.9)), color-stop(53.93%, rgba(0, 0, 0, 0)));
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 13.43%, rgba(0, 0, 0, 0) 53.93%);
-  top: 0;
-  left: 0;
-}
-
-.image--promo__item a .image--promo_text {
-  padding: 0 0 30px 25px;
-}
-
-.image--promo__item a .image--promo_text span {
-  z-index: 1;
-  position: relative;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 26px;
-  color: #ffffff;
-  padding: 5px 6px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-  margin-right: 10px;
-}
-
-.image--promo__item a .image--promo_text p {
-  max-width: 308px;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 122%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  z-index: 1;
-  position: relative;
-  margin-top: 25px;
-}
-
-.image--promo__item a .image--promo__item_img {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.image--promo__item a:hover .image--promo__item_img {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
 }
 
 .clientSlider .client--wrap {

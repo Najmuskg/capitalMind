@@ -232,28 +232,12 @@ $(function () {
 
   });
 
-  // new Swiper(".transactionSlider", {
-  //   slidesPerView: 2,
-  //   freeMode: true,
-  //   loop: false,
-  //   spaceBetween: 10,
-  //   pagination: {
-  //     el: ".transaction-progress",
-  //     type: "progressbar",
-  //   },
-  //   navigation: {
-  //     nextEl: ".transaction-next",
-  //     prevEl: ".transaction-prev",
-  //   },
-  // });
-
- new Swiper(".transactionSlider", {
+  new Swiper(".transactionSlider", {
     slidesPerView: 2,
-     grid: {
-       rows: 2,
-     },
+    grid: {
+      rows: 2,
+    },
     spaceBetween: 10,
-    // speed: 500,
     pagination: {
       el: ".quote-progress",
       type: "progressbar",
@@ -268,8 +252,10 @@ $(function () {
         slidesPerView: 3,
       },
     },
-
   });
+
+
+
 
 
   // new Swiper(".dealsSlider", {
