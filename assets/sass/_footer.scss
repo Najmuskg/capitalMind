@@ -1,4 +1,18 @@
 .footer {
+  .backTop {
+    @include d-flex;
+    align-items: center;
+    height: 55px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    span{
+      cursor: pointer;
+    }
+}
     .holder {
       max-width: 1300px;
     }

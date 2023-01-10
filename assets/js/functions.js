@@ -150,7 +150,7 @@ $(function () {
 
   /*========== Scroll Top =========*/
 
-  $(".backTop").on("click", function (e) {
+  $(".backTop span").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate({ scrollTop: "0" }, "slow");
   });/*========== End Of Scroll TOp =========*/
