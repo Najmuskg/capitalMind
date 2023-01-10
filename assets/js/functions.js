@@ -264,8 +264,21 @@ $(function () {
     slidesPerView:"auto",
     freeMode: true,
     spaceBetween: 10,
-
-
+  });
+  new Swiper(".bannerSlider", {
+    speed:500,
+    slidesPerView:"auto",
+    freeMode: true,
+    spaceBetween: 10,
+    pagination: {
+      el: ".quote-progress",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".quote-next",
+      prevEl: ".quote-prev",
+      
+    },
   });
 
   new Swiper(".transactionSlider", {

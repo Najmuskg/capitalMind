@@ -899,12 +899,12 @@
         }
         .breadcrumbs {
             color: $color--white;
-            li{
-                a{
+            li {
+                a {
                     color: rgba($color--white, 0.5);
                     &:hover {
                         color: $color--2;
-                      }
+                    }
                 }
             }
         }
@@ -933,6 +933,22 @@
                     letter-spacing: -0.02em;
                     color: $color--white;
                     max-width: 626px;
+                }
+            }
+        }
+    }
+    &.banner--client {
+        &::before {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                linear-gradient(360deg, rgba(0, 0, 0, 0.7) 9.97%, rgba(0, 0, 0, 0) 58.39%);
+                opacity: 1;
+        }
+
+        .banner--wrapper__caption{
+            max-width: 683px;
+            .banner--wrapper__caption_text {
+                p {
+                    max-width: 675px;
                 }
             }
         }

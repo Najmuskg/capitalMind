@@ -82,9 +82,14 @@
         }
     }
 }
-
+.bannerSlider,
 .clientSlider,
 .newsSlider {
+    .quote-next{
+        img{
+            color: $color--white;
+        }
+    }
     .swiper-controls__progress {
         .swiper-pagination-progressbar {
             background: $color--white;
@@ -168,6 +173,12 @@
                 }
             }
         }
+    }
+}
+
+.bannerSlider {
+    .swiper-controls{
+        margin-top: 40px;
     }
 }
 

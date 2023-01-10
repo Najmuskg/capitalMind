@@ -2737,6 +2737,22 @@ input[type="search"]::-webkit-search-results-decoration {
   max-width: 626px;
 }
 
+.banner--wrapper.banner--client::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left bottom, left top, color-stop(9.97%, rgba(0, 0, 0, 0.7)), color-stop(58.39%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7) 9.97%, rgba(0, 0, 0, 0) 58.39%);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(bottom, rgba(0, 0, 0, 0.7) 9.97%, rgba(0, 0, 0, 0) 58.39%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(360deg, rgba(0, 0, 0, 0.7) 9.97%, rgba(0, 0, 0, 0) 58.39%);
+  opacity: 1;
+}
+
+.banner--wrapper.banner--client .banner--wrapper__caption {
+  max-width: 683px;
+}
+
+.banner--wrapper.banner--client .banner--wrapper__caption .banner--wrapper__caption_text p {
+  max-width: 675px;
+}
+
 .video--bg {
   left: 0;
   height: 100%;
@@ -5158,11 +5174,19 @@ img.mfp-img {
   width: 100%;
 }
 
+.bannerSlider .quote-next img,
+.clientSlider .quote-next img,
+.newsSlider .quote-next img {
+  color: #ffffff;
+}
+
+.bannerSlider .swiper-controls__progress .swiper-pagination-progressbar,
 .clientSlider .swiper-controls__progress .swiper-pagination-progressbar,
 .newsSlider .swiper-controls__progress .swiper-pagination-progressbar {
   background: #ffffff;
 }
 
+.bannerSlider .swiper-controls__progress .swiper-pagination-progressbar span,
 .clientSlider .swiper-controls__progress .swiper-pagination-progressbar span,
 .newsSlider .swiper-controls__progress .swiper-pagination-progressbar span {
   background: #ffffff;
@@ -5256,5 +5280,9 @@ img.mfp-img {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.bannerSlider .swiper-controls {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=screen.css.map */
