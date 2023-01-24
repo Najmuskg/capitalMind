@@ -12,6 +12,10 @@
     span{
       cursor: pointer;
     }
+    &.backTop--gray{
+      background-color: $color--4;
+      margin-top: 40px;
+    }
 }
     .holder {
       max-width: 1300px;

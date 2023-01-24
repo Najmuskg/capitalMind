@@ -941,15 +941,40 @@
         &::before {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                 linear-gradient(360deg, rgba(0, 0, 0, 0.7) 9.97%, rgba(0, 0, 0, 0) 58.39%);
-                opacity: 1;
+            opacity: 1;
         }
 
-        .banner--wrapper__caption{
+        .banner--wrapper__caption {
             max-width: 683px;
             .banner--wrapper__caption_text {
                 p {
                     max-width: 675px;
                 }
+            }
+        }
+    }
+    &.banner--client_sub {
+        &::before {
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 13.43%, rgba(0, 0, 0, 0) 76.74%);
+        }
+    }
+    &.banner--Sector {
+        &::before {
+            content: none;
+        }
+        .section--subTitle {
+            h1 {
+                color: $color--1;
+            }
+        }
+        .banner--wrapper__caption_title {
+            h2 {
+                color: $color--1;
+            }
+        }
+        .banner--wrapper__caption_text {
+            p {
+                color: $color--1;
             }
         }
     }

@@ -164,6 +164,11 @@
               width: 174px;
             }
           }
+          .client--info_text{
+            &::after {
+                width: 174px;
+              }
+          }
       
 
         &.title--block {

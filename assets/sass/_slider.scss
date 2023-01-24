@@ -10,6 +10,13 @@
         overflow: hidden;
     }
 }
+.relatedSlider {
+overflow: visible;
+    .swiper-slide {
+        width: 361px;
+        height: 354px;
+    }
+}
 
 .swiper-controls {
     display: flex;

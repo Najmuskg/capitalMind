@@ -767,6 +767,10 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
+.bg-gray {
+  background-color: $color--6;
+
+}
 
 .btn--link {
   color: $color--white;
