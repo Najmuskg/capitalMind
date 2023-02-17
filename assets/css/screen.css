@@ -2143,7 +2143,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: relative;
 }
 .main--nav > li.menu-item-has-children a:not(.sub-menu a)::after {
-  background-image: url(../images/rightVector.svg);
+  background-image: url(../images/rightVhector-white.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -2164,17 +2164,40 @@ input[type=search]::-webkit-search-results-decoration {
 .main--nav > li.menu-item-has-children a:not(.sub-menu a):hover::after {
   right: 0.625rem;
 }
+.main--nav > li.menu-item-has-children.open a:not(.sub-menu a) {
+  color: #bf0a27;
+  position: relative;
+}
+.main--nav > li.menu-item-has-children.open a:not(.sub-menu a)::after {
+  background-image: url(../images/rightVector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  height: 15px;
+  position: absolute;
+  right: 0.625rem;
+  right: 0;
+  top: 0.9375rem;
+  width: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
 .main--nav > li.menu-item-has-children.open > .sub-menu {
   display: block;
-  left: 100%;
-  padding: 0 2.875rem;
-  position: absolute;
-  top: 0;
   width: 420px;
+  max-height: 300px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .main--nav > li.menu-item-has-children.open > .sub-menu {
-    max-height: 300px;
+    padding: 0 2.875rem;
+    left: 100%;
+    position: absolute;
+    top: 0;
   }
 }
 .main--nav > li ul.sub-menu {
@@ -2196,6 +2219,14 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .main--nav > li ul.sub-menu li a:hover {
   color: #bf0a27;
+}
+.main--nav > li ul.sub-menu li:first-child {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main--nav > li ul.sub-menu li:first-child {
+    display: block;
+  }
 }
 .main--nav > li ul.sub-menu li:first-child a {
   border-bottom: 1px solid #bbbec1;

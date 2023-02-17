@@ -45,6 +45,7 @@ $(function () {
     event.stopPropagation();
     $(this).parent().siblings().removeClass('open');
     $(this).parent().toggleClass('open');
+    // $(this).parent().toggleClass('ClickedSubMenu');
   });
 
 

@@ -632,8 +632,9 @@
         &.menu-item-has-children {
             a:not(.sub-menu a) {
                 position: relative;
+
                 &::after {
-                    background-image: url(../images/rightVector.svg);
+                    background-image: url(../images/rightVhector-white.svg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: contain;
@@ -655,16 +656,36 @@
                 }
             }
             &.open {
+                a:not(.sub-menu a) {
+                    color: $color--2;
+                    position: relative;
+
+                &::after {
+                    background-image: url(../images/rightVector.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                    content: "";
+                    height: 15px;
+                    position: absolute;
+                    right: rem(10);
+                    right: 0;
+                    top: rem(15);
+                    width: 10px;
+                    transition: all 0.5s ease-in-out;
+                }
+                }
                 > .sub-menu {
                     display: block;
-                    left: 100%;
-                    padding: 0 2.875rem;
-                    position: absolute;
-                    top: 0;
                     width: 420px;
+                    max-height: 300px;
+                    transition: all 0.5s ease-in-out;
 
-                    @include breakpoint(max-width $breakpoint--main - 1px) {
-                        max-height: 300px;
+                    @include breakpoint($breakpoint--main + 0px) {
+                        padding: 0 2.875rem;
+                        left: 100%;
+                        position: absolute;
+                        top: 0;
                     }
                 }
             }
@@ -692,6 +713,10 @@
                     }
                 }
                 &:first-child {
+                    display: none;
+                    @include breakpoint($breakpoint--main + 0px) {
+                        display: block;
+                    }
                     a {
                         border-bottom: 1px solid #bbbec1;
                         color: white;
