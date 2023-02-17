@@ -1,0 +1,241 @@
+.deals--row {
+    margin: rem(40) 0;
+    @extend %d-flex;
+    justify-content: center;
+
+    @include breakpoint($breakpoint--main + 0px) {
+        margin: rem(40) -5px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    .transactionPromo {
+        margin: 0 0 rem(10);
+        @include breakpoint($breakpoint--main + 0px) {
+            @include flex(33.33%);
+            padding: 0 rem(5);
+
+            &:nth-child(3n + 1) {
+                transition-delay: 0.4s;
+            }
+            &:nth-child(3n + 2) {
+                transition-delay: 0.6s;
+            }
+            &:nth-child(3n + 3) {
+                transition-delay: 0.8s;
+            }
+        }
+        a {
+            height: 354px;
+        }
+    }
+}
+
+.transactionPromo {
+    a {
+        color: $color--white;
+        border-radius: rem(10);
+        @extend %d-flex;
+        align-items: flex-end;
+        height: 330px;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+
+        @include breakpoint($breakpoint--main + 0px) {
+            height: 350px;
+        }
+
+        &::after {
+            background: linear-gradient(
+                359.67deg,
+                rgba(0, 0, 0, 0.9) 7.47%,
+                rgba(0, 0, 0, 0.441) 40.27%,
+                rgba(0, 42, 96, 0) 53.45%,
+                rgba(0, 0, 0, 0) 53.45%
+            );
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &:hover {
+            .transactionPromo__caption_text {
+                @include breakpoint($breakpoint--main + 0px) {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+    &__img {
+        @extend %bg-cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+        transition: all 0.5s ease;
+    }
+
+    &__caption {
+        padding: rem(30) rem(25) rem(10) rem(25);
+        position: relative;
+        width: 100%;
+        z-index: 3;
+
+        h3 {
+            color: white;
+            font-weight: 300;
+            line-height: 122%;
+            margin: 0;
+            letter-spacing: -0.02em;
+            font-size: rem(24);
+            margin: 0 0 rem(20);
+
+            @include breakpoint($breakpoint--main + 0px) {
+                font-size: rem(28);
+            }
+        }
+
+        &_text {
+            @include breakpoint($breakpoint--main + 0px) {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.8s ease-in-out;
+            }
+
+            p {
+                color: $color--white;
+                font-size: rem(14);
+
+                @include breakpoint($breakpoint--main + 0px) {
+                    font-size: rem(18);
+                    line-height: 120%;
+                }
+            }
+
+            .btn--link {
+                font-weight: 400;
+                font-size: rem(12);
+                line-height: rem(26);
+                margin-top: rem(10);
+                margin-bottom: rem(15);
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.exploreAbout--promo {
+    margin: rem(40) 0;
+    @include breakpoint($breakpoint--main + 0px) {
+        margin: rem(40) -5px 0;
+        @include d-flex;
+        justify-content: center;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .exploreAbout {
+        margin: 0 0 rem(10);
+        @include breakpoint($breakpoint--main + 0px) {
+            @include flex(50%);
+            padding: 0 rem(5);
+
+            &:nth-child(2n + 1) {
+                transition-delay: 0.4s;
+            }
+            &:nth-child(2n + 2) {
+                transition-delay: 0.6s;
+            }
+        }
+        a {
+            color: $color--white;
+            border-radius: rem(10);
+            @extend %d-flex;
+            align-items: flex-end;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+
+            @include breakpoint($breakpoint--main + 0px) {
+                height: 220px;
+            }
+
+            &::after {
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) -12.04%, rgba(0, 0, 0, 0) 88.89%);
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+            }
+
+            &:hover {
+                .exploreAbout__img {
+                    transform: scale(1.06);
+                }
+                .exploreAbout__caption {
+                    h3{
+                        color: $color--2;
+                        transition: all 0.40s ease-in-out;
+                    }
+                    img{
+                        transform: translateX(-10px);
+                        transition: all 0.40s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        &__img {
+            @extend %bg-cover;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+
+        &__caption {
+            @extend %d-flex;
+            justify-content: space-between;
+            padding: rem(30) rem(25) rem(10) rem(25);
+            position: relative;
+            width: 100%;
+            z-index: 3;
+    
+            h3 {
+                color: white;
+                font-weight: 300;
+                line-height: 122%;
+                margin: 0;
+                letter-spacing: -0.02em;
+                font-size: rem(24);
+                margin: 0 0 rem(20);
+                position: relative;
+                transition: all 0.40s ease-in-out;
+    
+                @include breakpoint($breakpoint--main + 0px) {
+                    font-size: rem(28);
+                }
+            }
+            img{
+                margin-bottom: 20px;
+                transition: all 0.40s ease-in-out;
+            }
+        }
+    }
+}

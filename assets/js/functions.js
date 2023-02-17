@@ -45,7 +45,6 @@ $(function () {
     event.stopPropagation();
     $(this).parent().siblings().removeClass('open');
     $(this).parent().toggleClass('open');
-    $('.secondary-nav').addClass('sub-menu-open');
   });
 
 
@@ -91,7 +90,7 @@ $(function () {
   $(".toggle-menu").on("click", function () {
     $("body").toggleClass("menu-extended");
     $("header").toggleClass("nav-open");
-    $(".secondary-nav").removeClass("sub-menu-open");
+    // $(".secondary-nav").removeClass("sub-menu-open");
     $(".menu-item-has-children").removeClass("open");
   });/*========== End of Sticky Menu =========*/
    
@@ -155,6 +154,11 @@ $(function () {
     $("html, body").animate({ scrollTop: "0" }, "slow");
   });/*========== End Of Scroll TOp =========*/
 
+
+  $(".returnTop").on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
+  });
 
 /*========== Language Selector =========*/
 
@@ -379,10 +383,7 @@ $(function () {
 
   /* Scroll to Top  */
   /* ------------------------------------------- */
-  $(".returnTop").on("click", function (e) {
-    e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, "300");
-  });
+  
 
   function isScrolledIntoView(elem) {
     var docViewTop = $(window).scrollTop();

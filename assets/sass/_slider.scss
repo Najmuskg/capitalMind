@@ -11,7 +11,7 @@
     }
 }
 .relatedSlider {
-overflow: visible;
+    overflow: visible;
     .swiper-slide {
         width: 361px;
         height: 354px;
@@ -92,8 +92,8 @@ overflow: visible;
 .bannerSlider,
 .clientSlider,
 .newsSlider {
-    .quote-next{
-        img{
+    .quote-next {
+        img {
             color: $color--white;
         }
     }
@@ -105,6 +105,16 @@ overflow: visible;
             }
         }
     }
+}
+.helpNewsSlider{
+    .swiper-controls__progress {
+        .swiper-pagination-progressbar {
+            background: $color--1;
+            span {
+                background: $color--1;
+            }
+        }
+    }  
 }
 
 .globalSLider {
@@ -120,7 +130,6 @@ overflow: visible;
 .newsSlider {
     overflow: visible;
     .swiper-slide {
-        //    width: 170px;
         overflow: hidden;
         height: 583px;
         .image--promo {
@@ -154,7 +163,7 @@ overflow: visible;
                         max-width: 300px;
                         margin-top: 20px;
                         margin-bottom: 20px;
-                        &::after{
+                        &::after {
                             width: 88px;
                         }
                     }
@@ -168,8 +177,8 @@ overflow: visible;
                 }
             }
             &:hover {
-                .image--promo_text{
-                    .section--title{
+                .image--promo_text {
+                    .section--title {
                         color: $color--2;
                         transition: all 0.5s ease-in-out;
                     }
@@ -184,7 +193,10 @@ overflow: visible;
 }
 
 .bannerSlider {
-    .swiper-controls{
+    .swiper-wrapper {
+        align-items: flex-end;
+    }
+    .swiper-controls {
         margin-top: 40px;
     }
 }
